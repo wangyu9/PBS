@@ -1,0 +1,57 @@
+﻿Build started 2014/5/18 21:38:18.
+     1>Project "C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\pngstest\pngstest.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "x64\Release\pngstest.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\pngstest.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\\" libpng16.lib /MANIFEST /ManifestFile:"x64\Release\pngstest.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\pngstest.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\pngstest.lib" /MACHINE:X64 x64\Release\pngstest.obj
+         Generating code
+         Finished generating code
+         pngstest.vcxproj -> C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\pngstest.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\pngstest.exe;#1" /manifest x64\Release\pngstest.exe.intermediate.manifest
+       BscMake:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\pngstest.bsc" x64\Release\pngstest.sbr
+       CustomBuildStep:
+         Description: Executing libpng simplified API test program
+         "C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\pngstest.exe" --strict --log --touch "x64\Release\pngstest.out" ../../../contrib/pngsuite/basn0g01.png ../../../contrib/pngsuite/basn0g02.png ../../../contrib/pngsuite/basn0g04.png ../../../contrib/pngsuite/basn0g08.png ../../../contrib/pngsuite/basn0g16.png ../../../contrib/pngsuite/basn2c08.png ../../../contrib/pngsuite/basn2c16.png ../../../contrib/pngsuite/basn3p01.png ../../../contrib/pngsuite/basn3p02.png ../../../contrib/pngsuite/basn3p04.png ../../../contrib/pngsuite/basn3p08.png ../../../contrib/pngsuite/basn4a08.png ../../../contrib/pngsuite/basn4a16.png ../../../contrib/pngsuite/basn6a08.png ../../../contrib/pngsuite/basn6a16.png ../../../contrib/pngsuite/ftbbn0g01.png ../../../contrib/pngsuite/ftbbn0g02.png ../../../contrib/pngsuite/ftbbn0g04.png ../../../contrib/pngsuite/ftbbn2c16.png ../../../contrib/pngsuite/ftbbn3p08.png ../../../contrib/pngsuite/ftbgn2c16.png ../../../contrib/pngsuite/ftbgn3p08.png ../../../contrib/pngsuite/ftbrn2c08.png ../../../contrib/pngsuite/ftbwn0g16.png ../../../contrib/pngsuite/ftbwn3p08.png ../../../contrib/pngsuite/ftbyn3p08.png ../../../contrib/pngsuite/ftp0n0g08.png ../../../contrib/pngsuite/ftp0n2c08.png ../../../contrib/pngsuite/ftp0n3p08.png ../../../contrib/pngsuite/ftp1n3p08.png
+         :VCEnd
+         PASS: --strict ../../../contrib/pngsuite/basn0g01.png
+         PASS: --strict ../../../contrib/pngsuite/basn0g02.png
+         PASS: --strict ../../../contrib/pngsuite/basn0g04.png
+         PASS: --strict ../../../contrib/pngsuite/basn0g08.png
+         PASS: --strict ../../../contrib/pngsuite/basn0g16.png
+         PASS: --strict ../../../contrib/pngsuite/basn2c08.png
+         PASS: --strict ../../../contrib/pngsuite/basn2c16.png
+         PASS: --strict ../../../contrib/pngsuite/basn3p01.png
+         PASS: --strict ../../../contrib/pngsuite/basn3p02.png
+         PASS: --strict ../../../contrib/pngsuite/basn3p04.png
+         PASS: --strict ../../../contrib/pngsuite/basn3p08.png
+         PASS: --strict ../../../contrib/pngsuite/basn4a08.png
+         PASS: --strict ../../../contrib/pngsuite/basn4a16.png
+         PASS: --strict ../../../contrib/pngsuite/basn6a08.png
+         PASS: --strict ../../../contrib/pngsuite/basn6a16.png
+         PASS: --strict ../../../contrib/pngsuite/ftbbn0g01.png
+         PASS: --strict ../../../contrib/pngsuite/ftbbn0g02.png
+         PASS: --strict ../../../contrib/pngsuite/ftbbn0g04.png
+         PASS: --strict ../../../contrib/pngsuite/ftbbn2c16.png
+         PASS: --strict ../../../contrib/pngsuite/ftbbn3p08.png
+         PASS: --strict ../../../contrib/pngsuite/ftbgn2c16.png
+         PASS: --strict ../../../contrib/pngsuite/ftbgn3p08.png
+         PASS: --strict ../../../contrib/pngsuite/ftbrn2c08.png
+         PASS: --strict ../../../contrib/pngsuite/ftbwn0g16.png
+         PASS: --strict ../../../contrib/pngsuite/ftbwn3p08.png
+         PASS: --strict ../../../contrib/pngsuite/ftbyn3p08.png
+         PASS: --strict ../../../contrib/pngsuite/ftp0n0g08.png
+         PASS: --strict ../../../contrib/pngsuite/ftp0n2c08.png
+         PASS: --strict ../../../contrib/pngsuite/ftp0n3p08.png
+         PASS: --strict ../../../contrib/pngsuite/ftp1n3p08.png
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\pngstest.unsuccessfulbuild".
+         Touching "x64\Release\pngstest.lastbuildstate".
+     1>Done Building Project "C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\pngstest\pngstest.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.42

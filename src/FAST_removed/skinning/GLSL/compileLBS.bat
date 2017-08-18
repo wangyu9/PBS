@@ -1,0 +1,1 @@
+cgc lbsOptimized.vert -oglsl -profile gp4vp

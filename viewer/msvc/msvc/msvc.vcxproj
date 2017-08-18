@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{788898F5-D06E-4C2D-9286-12ADE6B395A9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>msvc</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="msvc.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="msvc.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="msvc.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="msvc.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <ExecutablePath>C:\Program Files\MATLAB\R2014a\bin\win64;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\VegaFEM-v2.0\libraries\;..\VegaFEM-v2.0\libraries\include;..\VegaFEM-v2.0\libraries\minivector;..\VegaFEM-v2.0\libraries\graph;..\VegaFEM-v2.0\libraries\imageIO;..\VegaFEM-v2.0\libraries\sceneObject;..\VegaFEM-v2.0\libraries\objMesh;..\VegaFEM-v2.0\libraries\matrixIO;..\VegaFEM-v2.0\libraries\sparseMatrix;..\VegaFEM-v2.0\libraries\configFile;..\VegaFEM-v2.0\libraries\lighting;..\VegaFEM-v2.0\libraries\volumetricMesh;..\VegaFEM-v2.0\libraries\massSpringSystem;..\pthreads-w32-2-9-1-release\Pre-built.2\include;..\VegaFEM-v2.0\utilities\interactiveDeformableSimulator;..\VegaFEM-v2.0\libraries\glui\glui-2.35\src\include;..\VegaFEM-v2.0\libraries\camera;..\VegaFEM-v2.0\libraries\getopts;..\VegaFEM-v2.0\libraries\performanceCounter;..\VegaFEM-v2.0\libraries\stvk;..\VegaFEM-v2.0\libraries\integrator;..\VegaFEM-v2.0\libraries\insertRows;..\VegaFEM-v2.0\libraries\forceModel;..\VegaFEM-v2.0\libraries\sparseSolver;..\VegaFEM-v2.0\libraries\integratorSparse;..\VegaFEM-v2.0\libraries\isotropicHyperelasticFEM;..\VegaFEM-v2.0\libraries\elasticForceModel;..\VegaFEM-v2.0\libraries\polarDecomposition;..\VegaFEM-v2.0\libraries\corotationalLinearFEM;..\VegaFEM-v2.0\libraries\loadList;..\..\..\src\VegaWrapper;$(IncludePath)</IncludePath>
+    <LibraryPath>..\pthreads-w32-2-9-1-release\Pre-built.2\lib\x64;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <LibraryPath>C:\Program Files (x86)\MATLAB\R2014a\extern\lib\win32\microsoft;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>C:\Program Files\MATLAB\R2014a\bin\win64;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\VegaFEM-v2.0\libraries\;..\VegaFEM-v2.0\libraries\include;..\VegaFEM-v2.0\libraries\minivector;..\VegaFEM-v2.0\libraries\graph;..\VegaFEM-v2.0\libraries\imageIO;..\VegaFEM-v2.0\libraries\sceneObject;..\VegaFEM-v2.0\libraries\objMesh;..\VegaFEM-v2.0\libraries\matrixIO;..\VegaFEM-v2.0\libraries\sparseMatrix;..\VegaFEM-v2.0\libraries\configFile;..\VegaFEM-v2.0\libraries\lighting;..\VegaFEM-v2.0\libraries\volumetricMesh;..\VegaFEM-v2.0\libraries\massSpringSystem;..\pthreads-w32-2-9-1-release\Pre-built.2\include;..\VegaFEM-v2.0\utilities\interactiveDeformableSimulator;..\VegaFEM-v2.0\libraries\glui\glui-2.35\src\include;..\VegaFEM-v2.0\libraries\camera;..\VegaFEM-v2.0\libraries\getopts;..\VegaFEM-v2.0\libraries\performanceCounter;..\VegaFEM-v2.0\libraries\stvk;..\VegaFEM-v2.0\libraries\integrator;..\VegaFEM-v2.0\libraries\insertRows;..\VegaFEM-v2.0\libraries\forceModel;..\VegaFEM-v2.0\libraries\sparseSolver;..\VegaFEM-v2.0\libraries\integratorSparse;..\VegaFEM-v2.0\libraries\isotropicHyperelasticFEM;..\VegaFEM-v2.0\libraries\elasticForceModel;..\VegaFEM-v2.0\libraries\polarDecomposition;..\VegaFEM-v2.0\libraries\corotationalLinearFEM;..\VegaFEM-v2.0\libraries\loadList;..\..\..\src\VegaWrapper;$(IncludePath)</IncludePath>
+    <LibraryPath>..\pthreads-w32-2-9-1-release\Pre-built.2\lib\x64;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;TETLIBRARY;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\;..\..\src;..\..\src\utils;..\..\..\src;..\..\src\GLSL;..\..\..\external\eigen-eigen-36bf2ceaf8f5;..\..\..\external\libigl\include;..\..\..\external\glew-1.9.0\include;..\..\..\external\tetgen;..\..\..\external\freeglut-2.8.1\include;..\..\..\external\libigl\external\AntTweakBar\include;%(AdditionalIncludeDirectories);C:\Program Files\MATLAB\R2014a\extern\include;..\..\..\external\eigen-eigen-36bf2ceaf8f5\unsupported;..\..\src\Vega\Wrapper;..\..\src\VegaWrapper;..\..\..\external\libigl\external\yimg;..\..\..\external\lpng1610;..\..\..\external\igl_addin\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;libmx.lib;libmat.lib;libeng.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\external\glew-1.9.0\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;USING_IGL_HEADER_ONLY_MODE_TURNOFF;IGL_STATIC_LIBRARY;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Program Files\MATLAB\R2015b\extern\lib\win64\microsoft;C:\Program Files\Mosek\7\tools\platform\win64x86\bin;C:\WorkSpace\Tools\HDF_Group\HDF5\1.8.15\lib;..\..\..\external\suitesparse-port\lapack_windows\x64;..\..\..\external\suitesparse-port\lib\x64\Release;..\..\..\external\AntTweakBar\lib\;..\..\..\external\freeglut-2.8.1-1\lib\x64\;..\..\..\external\glew-1.10.0\lib\Release\x64\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libblas.lib;liblapack.lib;libamd.lib;libccolamd.lib;libcxsparse.lib;libspqr.lib;libbtf.lib;libcholmod.lib;libklu.lib;libumfpack.lib;libcamd.lib;libcolamd.lib;libldl.lib;suitesparseconfig.lib;pthreadVC2.lib;hdf5.lib;hdf5_cpp.lib;glew32.lib;freeglut.lib;AntTweakBar64.lib;libmx.lib;libmat.lib;libeng.lib;mosek64_7_1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>libpng16.dll</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;TETLIBRARY;_CONSOLE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\;..\..\src;..\..\src\utils;..\..\..\src;..\..\src\GLSL;..\..\..\external\eigen-eigen-36bf2ceaf8f5;..\..\..\external\libigl\include;..\..\..\external\glew-1.9.0\include;..\..\..\external\tetgen;..\..\..\external\freeglut-2.8.1\include;..\..\..\external\libigl\external\AntTweakBar\include;C:\Program Files (x86)\Mosek\6\tools\platform\win32x86\h;%(AdditionalIncludeDirectories);C:\Program Files (x86)\MATLAB\R2014a\extern\include;..\..\..\external\eigen-eigen-36bf2ceaf8f5\unsupported;..\..\src\Vega\Wrapper;..\..\src\VegaWrapper;..\..\..\external\libigl\external\yimg;..\..\..\external\lpng1610;..\..\..\external\zlib-1.2.5;..\..\..\external\igl_addin\include</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <OpenMPSupport>true</OpenMPSupport>
+      <DisableLanguageExtensions>
+      </DisableLanguageExtensions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\external\glew-1.9.0\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;libmx.lib;libmat.lib;libeng.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <StackReserveSize>
+      </StackReserveSize>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;USING_IGL_HEADER_ONLY_MODE_TURNOFF;IGL_STATIC_LIBRARY;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\;..\..\src;..\..\src\utils;..\..\..\src;..\..\src\GLSL;..\..\..\external\eigen-eigen-bdd17ee3b1b3;..\..\..\external\eigen-eigen-bdd17ee3b1b3\unsupported;..\..\..\external\libigl\include;..\..\..\external\glew-1.10.0\include;..\..\..\external\tetgen;..\..\..\external\freeglut-2.8.1-1\include;..\..\..\external\suitesparse-port\SuiteSparse\CHOLMOD\Include;..\..\..\external\suitesparse-port\SuiteSparse\SuiteSparse_config;..\..\..\external\libigl\external\AntTweakBar\include;C:\Program Files\Mosek\7\tools\platform\win64x86\h;%(AdditionalIncludeDirectories);C:\Program Files\MATLAB\R2015b\extern\include;..\..\..\external\libigl\include\igl\tetgen;C:\WorkSpace\Tools\HDF_Group\HDF5\1.8.15\include;..\..\..\external\igl_addin\include\viewer;..\..\..\external\igl_addin\external\eigen3-hdf5;..\..\src\VegaWrapper;..\..\..\external\libigl\external\yimg;..\..\..\external\lpng1610;..\..\..\external\zlib-1.2.5;..\..\..\external\libigl\include\igl\matlab;..\..\..\external\libigl\include\igl\xml;..\..\src\PhysWrapper;..\..\..\external\libigl\external\Singular_Value_Decomposition;..\..\..\external\igl_addin\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>D:\Program Files\MATLAB\R2015b\extern\lib\win64\microsoft;C:\Program Files\Mosek\7\tools\platform\win64x86\bin;C:\WorkSpace\Tools\HDF_Group\HDF5\1.8.15\lib;..\..\..\external\suitesparse-port\lapack_windows\x64;..\..\..\external\suitesparse-port\lib\x64\Release;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libblas.lib;liblapack.lib;libamd.lib;libccolamd.lib;libcxsparse.lib;libspqr.lib;libbtf.lib;libcholmod.lib;libklu.lib;libumfpack.lib;libcamd.lib;libcolamd.lib;libldl.lib;suitesparseconfig.lib;pthreadVC2.lib;hdf5.lib;hdf5_cpp.lib;..\..\..\external\freeglut-2.8.1-1\lib\x64\freeglut.lib;..\..\..\external\glew-1.10.0\lib\Release\x64\glew32.lib;..\..\..\external\AntTweakBar\lib\AntTweakBar64.lib;libmx.lib;libmat.lib;libeng.lib;mosek64_7_1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>libpng16.dll</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\external\igl_addin\external\eigen3-hdf5\eigen3-hdf5.hpp" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\draw_mesh_with_pbs_shader.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\eigen_helper.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\geometrySolver.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\GLSL\directionalperpixel.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\GLSL\directionalperpixelcolor.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\GLSL\isolines.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\KeyFramer.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\linear_solver.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\modified\draw_skeleton_vector_graphics.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\physicsSolver.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\PluginManager.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\quadProg.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\quadSolver.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\rotatewidget.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\shaders.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\tinyxml2.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\transform.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\FileDialog.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\matlabIO.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\stb_image_write.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\texture_png.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\tga.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\TimerWrapper.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\ViewerTrackball.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\Camera.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\ControlUnit.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\Mesh.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\MeshData.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\MeshUI.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\PickingPluginBase.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\Viewer.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\ViewerBase.h" />
+    <ClInclude Include="..\..\..\external\libigl\external\yimg\YImage.hpp" />
+    <ClInclude Include="..\..\..\external\libigl\include\igl\biharmonic_coordinates.h" />
+    <ClInclude Include="..\..\..\external\libigl\include\igl\cotmatrix.h" />
+    <ClInclude Include="..\..\..\external\libigl\include\igl\cotmatrix_entries.h" />
+    <ClInclude Include="..\..\..\external\libigl\include\igl\face_occurrences.h" />
+    <ClInclude Include="..\..\..\external\libigl\include\igl\invert_diag.h" />
+    <ClInclude Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.h" />
+    <ClInclude Include="..\..\..\external\libigl\include\igl\normal_derivative.h" />
+    <ClInclude Include="..\..\..\external\libigl\include\igl\on_boundary.h" />
+    <ClInclude Include="..\..\..\external\libigl\include\igl\slice_into.h" />
+    <ClInclude Include="..\..\..\external\lpng1610\png.h" />
+    <ClInclude Include="..\..\..\external\lpng1610\pngconf.h" />
+    <ClInclude Include="..\..\..\external\lpng1610\pngdebug.h" />
+    <ClInclude Include="..\..\..\external\lpng1610\pnginfo.h" />
+    <ClInclude Include="..\..\..\external\lpng1610\pnglibconf.h" />
+    <ClInclude Include="..\..\..\external\lpng1610\pngpriv.h" />
+    <ClInclude Include="..\..\..\external\lpng1610\pngstruct.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\crc32.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\deflate.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\gzguts.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\inffast.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\inffixed.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\inflate.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\inftrees.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\trees.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\zconf.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\zlib.h" />
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\zutil.h" />
+    <ClInclude Include="..\..\..\src\MATLAB\matlab.h" />
+    <ClInclude Include="..\..\src\Camera.h" />
+    <ClInclude Include="..\..\src\Mesh.h" />
+    <ClInclude Include="..\..\src\plugins\Deform.h" />
+    <ClInclude Include="..\..\src\types.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\external\igl_addin\include\compute_weights.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\cotangent.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\draw_frame.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\draw_handle_struct.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\draw_primitives.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\farthest_point_sampling.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\geometrySolver.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\handle_structure.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\KeyFramer.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\lasso.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\lbs.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\libigl_removed\ReAntTweakBar.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\libigl_removed\xml\ReAntTweakBarXMLSerialization.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\libigl_removed\xml\XMLSerialization.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\libigl_removed\xml\XMLSerializer.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\linear_solver.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\modified\draw_skeleton_vector_graphics.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\move_point_onto_mesh.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\normal_deform_factors.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\physicsSolver.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\picking_util.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\PluginManager.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\print_matlab.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\quadProg.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\quadSolver.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\readH5MAT.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\readHANDLE.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\reproject_coordinate.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\shaders.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\tinyxml2.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\transform.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\transWidget.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\unique_plus.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\stb_image_write.c" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\texture_png.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\tga.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\ViewerTrackball.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\vf.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\Camera.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\ControlUnit.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\main.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\Mesh.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\MeshData.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\MeshUI.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\PickingPluginBase.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\Viewer.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\ViewerBase.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\writeH5MAT.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\writeHANDLE.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\external\yimg\YImage.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\adjacency_list.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\all_edges.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\avg_edge_length.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\axis_angle_to_quat.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\cat.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\colon.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\cotmatrix.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\cotmatrix_entries.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\cross.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\dihedral_angles.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\dot.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\doublearea.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\draw_point.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\draw_skeleton_3d.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\edge_lengths.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\EPS.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\face_areas.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\find.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\hsv_to_rgb.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\internal_angles.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\invert_diag.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\is_symmetric.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\lbs_matrix.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\list_to_matrix.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\massmatrix.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\matrix_to_list.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\mat_to_quat.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\max_size.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\min_quad_with_fixed.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\min_size.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\normalize_row_lengths.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\normalize_row_sums.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\per_corner_normals.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\per_edge_normals.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\per_face_normals.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\per_vertex_normals.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\png\render_to_png.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\polar_svd.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\polar_svd3x3.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\project.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\quat_mult.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\ray_sphere_intersect.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\readDMAT.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\readMESH.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\readOBJ.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\readOFF.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\readTGF.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\reorder.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\repmat.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\report_gl_error.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\rgb_to_hsv.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\slice.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\slice_into.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\sort.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\sortrows.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\sparse.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\svd3x3.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\trackball.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\unique.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\unique_simplices.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\unproject.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\vertex_triangle_adjacency.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\volume.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\writeDMAT.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\writeMESH.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\writeOBJ.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\writeOFF.cpp" />
+    <ClCompile Include="..\..\..\external\lpng1610\png.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngerror.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngget.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngmem.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngpread.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngread.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngrio.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngrtran.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngrutil.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngset.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngtrans.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngwio.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngwrite.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngwtran.c" />
+    <ClCompile Include="..\..\..\external\lpng1610\pngwutil.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\adler32.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\compress.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\crc32.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\deflate.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\gzclose.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\gzlib.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\gzread.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\gzwrite.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\infback.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\inffast.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\inflate.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\inftrees.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\trees.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\uncompr.c" />
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\zutil.c" />
+    <ClCompile Include="..\..\..\src\MATLAB\matlab.cpp" />
+    <ClCompile Include="..\..\src\ExplicitTemplate.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

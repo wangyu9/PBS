@@ -1,0 +1,27 @@
+  int pick_nearest_handle(const int &mouse_x, // mouse location
+	  const int &mouse_y,
+	  double &minsqdist,//the sq dist of nearest handle
+	  GLint *viewport, //viewport
+	  const double *projection_matrix, //opengl projection matrix
+	  const double *modelview_matrix, //opengl modelview matrix
+	  const std::vector<handleData> &handle_list, //list of vertices
+	  const int w_x = 1, // optional: width of window around the mouse in which we will search for faces
+	  const int w_y = 1, // optional: height of window around the mouse in which we will search for faces
+	  const int *center_x = 0, // optional: center of the window around the mouse in which we will search for faces. If not provided, the mouse position will be used.
+	  const int *center_y = 0);
+
+  //implements picking of a face and returns the index of the vertex in the face that was closest to the mouse point
+  static int pick_face_and_vertex(const int &mouse_x, // mouse location
+                                  const int &mouse_y,
+                                  GLint *viewport, //viewport
+                                  const double *projection_matrix, //opengl projection matrix
+                                  const double *modelview_matrix, //opengl modelview matrix
+                                  const PointMatrixType *vertices, //list of vertices
+                                  const FaceMatrixType *faces, //list of faces
+                                  std::vector< std::pair<double,IndexType> > &hit_face_list, // output: list of hit faces
+                                  const std::vector<int > &face_indices = std::vector<int> (0), // optional: list of face indices within faces that should be tested for picking. 
+                                  const std::vector<int > &face_labels = std::vector<int> (0), // optional: labels of faces that should be tested for picking. Should be of the same size as face_indices.
+                                  const int w_x = 1, // optional: width of window around the mouse in which we will search for faces
+                                  const int w_y = 1, // optional: height of window around the mouse in which we will search for faces
+                                  const int *center_x = 0, // optional: center of the window around the mouse in which we will search for faces. If not provided, the mouse position will be used.
+                                  const int *center_y = 0);	 

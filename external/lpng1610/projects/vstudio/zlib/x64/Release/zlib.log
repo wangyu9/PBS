@@ -1,0 +1,40 @@
+﻿Build started 2014/5/18 21:38:06.
+     1>Project "C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\zlib\zlib.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "x64\Release\zlib.unsuccessfulbuild".
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX /Ox /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D Z_SOLO /Gm- /EHsc /MD /GS- /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /FR"x64\Release\\" /Gd /TC /errorReport:prompt "..\..\..\..\zlib-1.2.5\adler32.c" "..\..\..\..\zlib-1.2.5\compress.c" "..\..\..\..\zlib-1.2.5\crc32.c" "..\..\..\..\zlib-1.2.5\deflate.c" "..\..\..\..\zlib-1.2.5\infback.c" "..\..\..\..\zlib-1.2.5\inffast.c" "..\..\..\..\zlib-1.2.5\inflate.c" "..\..\..\..\zlib-1.2.5\inftrees.c" "..\..\..\..\zlib-1.2.5\trees.c" "..\..\..\..\zlib-1.2.5\uncompr.c" "..\..\..\..\zlib-1.2.5\zutil.c"
+         adler32.c
+         compress.c
+         crc32.c
+         deflate.c
+         infback.c
+         inffast.c
+         inflate.c
+         inftrees.c
+         trees.c
+         uncompr.c
+         zutil.c
+       Lib:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\Lib.exe /OUT:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\zlib.lib" /NOLOGO /LTCG x64\Release\adler32.obj
+         x64\Release\compress.obj
+         x64\Release\crc32.obj
+         x64\Release\deflate.obj
+         x64\Release\infback.obj
+         x64\Release\inffast.obj
+         x64\Release\inflate.obj
+         x64\Release\inftrees.obj
+         x64\Release\trees.obj
+         x64\Release\uncompr.obj
+         x64\Release\zutil.obj
+         zlib.vcxproj -> C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\zlib.lib
+       BscMake:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\zlib.bsc" x64\Release\adler32.sbr x64\Release\compress.sbr x64\Release\crc32.sbr x64\Release\deflate.sbr x64\Release\infback.sbr x64\Release\inffast.sbr x64\Release\inflate.sbr x64\Release\inftrees.sbr x64\Release\trees.sbr x64\Release\uncompr.sbr x64\Release\zutil.sbr
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\zlib.unsuccessfulbuild".
+         Touching "x64\Release\zlib.lastbuildstate".
+     1>Done Building Project "C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\zlib\zlib.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.88

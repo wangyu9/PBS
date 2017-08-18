@@ -1,0 +1,15 @@
+#ifndef SHADERMODE_H
+#define SHADERMODE_H
+
+enum ShaderMode
+{
+  NO_SHADER,
+  DIRECTIONAL_PER_PIXEL,
+  DIRECTIONAL_PER_PIXEL_COLOR,
+  WEIGHTCOLORS,
+  SCALAR,
+  LBS,
+};
+#define NUM_SHADER_MODE 6
+
+#endif

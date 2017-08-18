@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EFCB9BBA-2D5B-40E8-BC2B-244CCD11A6AF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>skinning</RootNamespace>
+    <ProjectName>removed_codes2</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\..\external\eigen-eigen-6b38706d90a9;..\..\..\external\libigl\external\AntTweakBar\include;..\..\..\external\libigl\include;..\..\..\external\tetgen;C:\Program Files (x86)\Mosek\6\tools\platform\win32x86\h;..\..\..\external\libigl\include\igl\mosek;..\..\..\external\libigl\include\igl\tetgen;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\..\..\external\eigen-eigen-6b38706d90a9;..\..\..\external\libigl\external\AntTweakBar\include;..\..\..\external\libigl\include;..\..\..\external\tetgen;C:\Program Files (x86)\Mosek\6\tools\platform\win32x86\h;..\..\..\external\libigl\include\igl\mosek;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Program Files (x86)\Mosek\6\tools\platform\win32x86\bin\mosek6_0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>C:\Program Files (x86)\Mosek\6\tools\platform\win32x86\bin\mosek6_0.lib;..\..\..\external\AntTweakBar\lib\AntTweakBar.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\external\tetgen\tetgen.h" />
+    <ClInclude Include="..\..\..\src\DeformableMesh.h" />
+    <ClInclude Include="..\..\..\src\Dirichlet_LIMSolver2D.h" />
+    <ClInclude Include="..\..\..\src\Dirichlet_LIMSolver3D.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Animation.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\append_to_filename_before_extension.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\ArapEnergy.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\arap_dof.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\arap_linear_block.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\arap_rhs.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\BasicOpenGLView.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Bone.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\BoneBoneCopyMap.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\bone_roots_match.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\build_anttweakbar_modifier.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\ColorOption.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\columnize.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\copy_bone_roots_data.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\covariance_scatter_matrix.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\CTGALoader.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\DegreeOfFreedomType.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\destroy_bone_roots.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\discrete_iso_extra.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\distribute_transformations.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\draw_directed_line_segment.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\draw_floor.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\draw_mesh.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\draw_point.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Ease.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\eigen_glUniformMatrixXfv.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\ExtraWeight.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\fit_rotations.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_bones.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_displacements.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_fixed.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_free.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_positional_constraints_rhs.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_positional_constraints_system.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_rest_positions.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_transformations.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\group_sum_matrix.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\inside_line_segment.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\inside_point.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\intersection.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\iso_extra.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\is_planar.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\lbs_matrix.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\lerp.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\load_tgf_and_dmat_pair_as_bone_roots_and_weights.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\malloc.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\matrix_from_string.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\max_weight_index.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\MT19937.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\optimize_index_buffer.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\partition.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\polar_dec.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\polar_svd.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\project_connect.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\project_extra_compact.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\project_to_line.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\pseudocolors_from_weights.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Quat.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\read_BF.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\read_TGF.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\region_colors_from_weights.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\right_axis.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\ShaderMode.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Singular_Value_Decomposition_Kernel_Declarations.hpp" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Singular_Value_Decomposition_Main_Kernel_Body.hpp" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Singular_Value_Decomposition_Preamble.hpp" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\skinningAppDelegate.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\SkinningCallback.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\sort_weights.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Tform.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\theDarkSideOfEigen.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\tokenize_str.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\uncolumnize.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\uniform_sample.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\up_axis.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\vcacheopt.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Vec.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\ViewVector.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\view_axis.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\Widget.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\write_BF.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\WunderSVD3x3.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\WunderSVD3x3_AVX.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\WunderSVD3x3_SSE.h" />
+    <ClInclude Include="..\..\..\src\FAST\skinning\wunder_polar_svd.h" />
+    <ClInclude Include="..\..\..\src\GreenStrain_LIMSolver2D.h" />
+    <ClInclude Include="..\..\..\src\GreenStrain_LIMSolver3D.h" />
+    <ClInclude Include="..\..\..\src\Identity_LIMSolver2D.h" />
+    <ClInclude Include="..\..\..\src\Identity_LIMSolver3D.h" />
+    <ClInclude Include="..\..\..\src\Laplacian_LIMSolver2D.h" />
+    <ClInclude Include="..\..\..\src\Laplacian_LIMSolver3D.h" />
+    <ClInclude Include="..\..\..\src\LGARAP_LIMSolver2D.h" />
+    <ClInclude Include="..\..\..\src\LGARAP_LIMSolver3D.h" />
+    <ClInclude Include="..\..\..\src\LIMSolver.h" />
+    <ClInclude Include="..\..\..\src\LIMSolver2D.h" />
+    <ClInclude Include="..\..\..\src\LIMSolver3D.h" />
+    <ClInclude Include="..\..\..\src\LSConformal_LIMSolver2D.h" />
+    <ClInclude Include="..\..\..\src\NMSolver.h" />
+    <ClInclude Include="..\..\..\src\TetrahedronMesh.h" />
+    <ClInclude Include="..\..\..\src\TriangleMesh.h" />
+    <ClInclude Include="..\..\..\src\UniformLaplacian_LIMSolver2D.h" />
+    <ClInclude Include="..\..\..\src\UniformLaplacian_LIMSolver3D.h" />
+    <ClInclude Include="..\..\..\src\wunderSVD\Procrustes.h" />
+    <ClInclude Include="..\..\..\src\wunderSVD\Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp" />
+    <ClInclude Include="..\..\..\src\wunderSVD\Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp" />
+    <ClInclude Include="..\..\..\src\wunderSVD\Singular_Value_Decomposition_Kernel_Declarations.hpp" />
+    <ClInclude Include="..\..\..\src\wunderSVD\Singular_Value_Decomposition_Main_Kernel_Body.hpp" />
+    <ClInclude Include="..\..\..\src\wunderSVD\Singular_Value_Decomposition_Preamble.hpp" />
+    <ClInclude Include="..\..\..\src\wunderSVD\WunderSVD3x3.h" />
+    <ClInclude Include="..\..\..\src\wunderSVD\wunder_polar_svd.h" />
+    <ClInclude Include="..\..\src\plugins\DeformLocallyInjective.h" />
+    <ClInclude Include="..\msvc\FASTSkinning.h" />
+    <ClInclude Include="targaImage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\svd3x3\arap.cpp" />
+    <ClCompile Include="..\..\..\external\tetgen\predicates.cxx" />
+    <ClCompile Include="..\..\..\external\tetgen\tetgen.cxx" />
+    <ClCompile Include="..\..\..\src\Dirichlet_LIMSolver2D.cpp" />
+    <ClCompile Include="..\..\..\src\Dirichlet_LIMSolver3D.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\arap_dof.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\arap_linear_block.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\Bone.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\BoneBoneCopyMap.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\draw_floor.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\malloc.c" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\MT19937F.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\newdel.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\optimize_index_buffer.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\uniform_sample.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\WunderSVD3x3.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\WunderSVD3x3_AVX.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\WunderSVD3x3_SSE.cpp" />
+    <ClCompile Include="..\..\..\src\GreenStrain_LIMSolver2D.cpp" />
+    <ClCompile Include="..\..\..\src\GreenStrain_LIMSolver3D.cpp" />
+    <ClCompile Include="..\..\..\src\Identity_LIMSolver2D.cpp" />
+    <ClCompile Include="..\..\..\src\Identity_LIMSolver3D.cpp" />
+    <ClCompile Include="..\..\..\src\Laplacian_LIMSolver2D.cpp" />
+    <ClCompile Include="..\..\..\src\Laplacian_LIMSolver3D.cpp" />
+    <ClCompile Include="..\..\..\src\LGARAP_LIMSolver2D.cpp" />
+    <ClCompile Include="..\..\..\src\LGARAP_LIMSolver3D.cpp" />
+    <ClCompile Include="..\..\..\src\LIMSolver.cpp" />
+    <ClCompile Include="..\..\..\src\LIMSolver2D.cpp" />
+    <ClCompile Include="..\..\..\src\LIMSolver3D.cpp" />
+    <ClCompile Include="..\..\..\src\LSConformal_LIMSolver2D.cpp" />
+    <ClCompile Include="..\..\..\src\NMSolver.cpp" />
+    <ClCompile Include="..\..\..\src\Poisson_LIMSolver2D.cpp" />
+    <ClCompile Include="..\..\..\src\TetrahedronMesh.cpp" />
+    <ClCompile Include="..\..\..\src\TriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\src\UniformLaplacian_LIMSolver2D.cpp" />
+    <ClCompile Include="..\..\..\src\UniformLaplacian_LIMSolver3D.cpp" />
+    <ClCompile Include="..\..\..\src\wunderSVD\Procrustes.cpp" />
+    <ClCompile Include="..\..\..\src\wunderSVD\WunderSVD3x3.cpp" />
+    <ClCompile Include="..\..\src\plugins\DeformLocallyInjective.cpp" />
+    <ClCompile Include="..\..\src\plugins\PickingPlugin.cpp" />
+    <ClCompile Include="..\msvc\skinning_interface.cpp" />
+    <ClCompile Include="gui_main.cpp" />
+    <ClCompile Include="old_bbw_demo.cpp" />
+    <ClCompile Include="targaImage.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

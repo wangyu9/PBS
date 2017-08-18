@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Viewer">
+      <UniqueIdentifier>{039d2aad-a8ca-45ae-9610-d22c5a50d597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Viewer\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Viewer\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Viewer\Util">
+      <UniqueIdentifier>{e4a46d80-4404-4d11-9efb-dd6097688206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\Util\Source">
+      <UniqueIdentifier>{911d08fd-e2ce-4c39-87fb-015c9a066d19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\Util\MATLAB">
+      <UniqueIdentifier>{99d1802b-10fb-478c-8ced-394bdb1377a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Deform">
+      <UniqueIdentifier>{a6af518a-4c12-43c1-b38a-36cc46ed3728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Deform\Skinning">
+      <UniqueIdentifier>{6cd4448e-6fdf-4304-8be8-809759b22b0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Deform\Phys">
+      <UniqueIdentifier>{6fb03655-6223-4b4f-8ded-804465c4bef7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGLADDIN">
+      <UniqueIdentifier>{6c09b451-cefe-4881-8417-ddc404f98f0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGLADDIN\IGLADDIN_NO_HEADERMODE">
+      <UniqueIdentifier>{0555b63a-73b0-4345-a5fe-1406e318ab6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGLADDIN\IGLADDIN_WITH_HEADERMODE">
+      <UniqueIdentifier>{be02acef-53a9-4b65-ba32-15e1e656197d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGL">
+      <UniqueIdentifier>{6a90ad3f-8a34-4647-9a51-6fba988c8ce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Deform\Direct">
+      <UniqueIdentifier>{7d06293a-2083-4dbb-afac-14a9ade0c392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGLADDIN\libigl_removed">
+      <UniqueIdentifier>{671a173d-e327-4b3d-843c-86dd83535311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{e4c25228-d436-46a8-846b-b4d66fe9ae71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGLADDIN-Plugins">
+      <UniqueIdentifier>{2f9521c3-e37d-4165-b98c-50e2f09ea521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGLADDIN\Modified">
+      <UniqueIdentifier>{a4896f9f-88ef-4975-9590-4d7feacd8da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGLADDIN\Main">
+      <UniqueIdentifier>{01b66ec2-341f-4615-a75a-6bb506163d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGL\YImage">
+      <UniqueIdentifier>{89c59ad4-56da-4ab9-be42-91d4df789150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\libpng">
+      <UniqueIdentifier>{1e229c55-48ae-42f1-999a-6287115051fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\libpng\header">
+      <UniqueIdentifier>{77845377-f39e-445b-9857-32dd1bd9f08c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\libpng\source">
+      <UniqueIdentifier>{ddca2419-c286-4af8-aa03-7c8a3d8e968b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\zlib">
+      <UniqueIdentifier>{81002026-cee1-46a5-936a-e27c481b2131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\zlib\header">
+      <UniqueIdentifier>{7a642ddc-5c0a-4d0e-8b7a-a9802b2aa2f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\zlib\source">
+      <UniqueIdentifier>{9449600b-f542-419c-af9b-39fe2f6d85aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewer\GLSL">
+      <UniqueIdentifier>{b6c995eb-8b5e-466f-be46-6e3a4d6aa5ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\plugins\Deform.h">
+      <Filter>Viewer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\types.h">
+      <Filter>Viewer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\MATLAB\matlab.h">
+      <Filter>Viewer\Util\MATLAB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\external\yimg\YImage.hpp">
+      <Filter>IGL\YImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\lpng1610\png.h">
+      <Filter>Viewer\libpng\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\lpng1610\pngdebug.h">
+      <Filter>Viewer\libpng\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\lpng1610\pngconf.h">
+      <Filter>Viewer\libpng\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\lpng1610\pnginfo.h">
+      <Filter>Viewer\libpng\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\lpng1610\pnglibconf.h">
+      <Filter>Viewer\libpng\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\lpng1610\pngpriv.h">
+      <Filter>Viewer\libpng\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\lpng1610\pngstruct.h">
+      <Filter>Viewer\libpng\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\crc32.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\deflate.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\gzguts.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\inffast.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\inffixed.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\inflate.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\inftrees.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\trees.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\zconf.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\zlib.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\zlib-1.2.5\zutil.h">
+      <Filter>Viewer\zlib\header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\transform.h">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\geometrySolver.h">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\physicsSolver.h">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\quadSolver.h">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\quadProg.h">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\eigen_helper.h">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\rotatewidget.h">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\modified\draw_skeleton_vector_graphics.h">
+      <Filter>IGLADDIN\Modified</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\external\eigen3-hdf5\eigen3-hdf5.hpp">
+      <Filter>IGLADDIN</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Mesh.h">
+      <Filter>Viewer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Camera.h">
+      <Filter>Viewer\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\KeyFramer.h">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\draw_mesh_with_pbs_shader.h">
+      <Filter>IGLADDIN</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\biharmonic_coordinates.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\invert_diag.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\cotmatrix.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\cotmatrix_entries.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\on_boundary.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\normal_derivative.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\face_occurrences.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\linear_solver.h">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\slice_into.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\ControlUnit.h">
+      <Filter>Deform\Direct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.h">
+      <Filter>Deform\Direct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.h">
+      <Filter>Deform\Phys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.h">
+      <Filter>Deform\Skinning</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\Camera.h">
+      <Filter>Viewer\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\Mesh.h">
+      <Filter>Viewer\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\MeshData.h">
+      <Filter>Viewer\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\MeshUI.h">
+      <Filter>Viewer\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\ViewerBase.h">
+      <Filter>Deform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\Viewer.h">
+      <Filter>IGLADDIN\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\PickingPluginBase.h">
+      <Filter>Deform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.h">
+      <Filter>Deform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.h">
+      <Filter>Deform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\GLSL\directionalperpixel.h">
+      <Filter>Viewer\GLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\GLSL\directionalperpixelcolor.h">
+      <Filter>Viewer\GLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\GLSL\isolines.h">
+      <Filter>Viewer\GLSL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\FileDialog.h">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\matlabIO.h">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\stb_image_write.h">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\texture_png.h">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\tga.h">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\TimerWrapper.h">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\ViewerTrackball.h">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\tinyxml2.h">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\shaders.h">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\PluginManager.h">
+      <Filter>Plugins</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\MATLAB\matlab.cpp">
+      <Filter>Viewer\Util\MATLAB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\external\yimg\YImage.cpp">
+      <Filter>IGL\YImage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\png.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngerror.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngget.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngmem.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngpread.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngread.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngrio.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngrtran.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngrutil.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngset.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngtrans.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngwutil.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngwio.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngwrite.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\lpng1610\pngwtran.c">
+      <Filter>Viewer\libpng\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\adler32.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\compress.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\crc32.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\deflate.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\gzclose.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\gzlib.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\gzread.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\gzwrite.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\infback.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\inffast.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\inflate.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\inftrees.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\trees.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\uncompr.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\zlib-1.2.5\zutil.c">
+      <Filter>Viewer\zlib\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\lasso.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\transform.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\draw_primitives.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\draw_handle_struct.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\handle_structure.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\geometrySolver.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\physicsSolver.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\quadProg.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\quadSolver.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\picking_util.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\cotangent.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\readDMAT.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\adjacency_list.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\polar_svd.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\print_matlab.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\readHANDLE.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\writeHANDLE.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\lbs.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\normal_deform_factors.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\reproject_coordinate.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\unique_plus.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\vf.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\min_quad_with_fixed.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\cross.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\cat.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\slice.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\is_symmetric.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\find.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\EPS.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\colon.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\repmat.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\project.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\unproject.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\ray_sphere_intersect.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\report_gl_error.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\mat_to_quat.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\trackball.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\lbs_matrix.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\massmatrix.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\readMESH.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\readOBJ.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\readOFF.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\readTGF.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\unique.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\volume.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\writeDMAT.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\writeMESH.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\writeOBJ.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\writeOFF.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\edge_lengths.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\sparse.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\normalize_row_lengths.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\list_to_matrix.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\quat_mult.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\dot.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\sort.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\sortrows.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\max_size.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\min_size.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\normalize_row_sums.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\axis_angle_to_quat.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\matrix_to_list.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\png\render_to_png.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\hsv_to_rgb.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\rgb_to_hsv.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\per_corner_normals.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\per_edge_normals.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\per_face_normals.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\per_vertex_normals.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\vertex_triangle_adjacency.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\all_edges.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\internal_angles.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\doublearea.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\dihedral_angles.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\face_areas.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\unique_simplices.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\reorder.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ExplicitTemplate.cpp">
+      <Filter>Viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\draw_frame.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\transWidget.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\farthest_point_sampling.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\draw_point.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\draw_skeleton_3d.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\move_point_onto_mesh.cpp">
+      <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\modified\draw_skeleton_vector_graphics.cpp">
+      <Filter>IGLADDIN\Modified</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\writeH5MAT.cpp">
+      <Filter>IGLADDIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\readH5MAT.cpp">
+      <Filter>IGLADDIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\KeyFramer.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\libigl_removed\ReAntTweakBar.cpp">
+      <Filter>IGLADDIN\libigl_removed</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\libigl_removed\xml\ReAntTweakBarXMLSerialization.cpp">
+      <Filter>IGLADDIN\libigl_removed</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\libigl_removed\xml\XMLSerialization.cpp">
+      <Filter>IGLADDIN\libigl_removed</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\libigl_removed\xml\XMLSerializer.cpp">
+      <Filter>IGLADDIN\libigl_removed</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\svd3x3.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\polar_svd3x3.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\compute_weights.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\invert_diag.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\cotmatrix.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\cotmatrix_entries.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\linear_solver.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\slice_into.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\ControlUnit.cpp">
+      <Filter>Deform\Direct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.cpp">
+      <Filter>Deform\Direct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.cpp">
+      <Filter>Deform\Phys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.cpp">
+      <Filter>Deform\Skinning</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\Camera.cpp">
+      <Filter>Viewer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\main.cpp">
+      <Filter>Viewer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\Mesh.cpp">
+      <Filter>Viewer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\MeshData.cpp">
+      <Filter>Viewer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\MeshUI.cpp">
+      <Filter>Viewer\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\ViewerBase.cpp">
+      <Filter>Deform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\Viewer.cpp">
+      <Filter>IGLADDIN\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\PickingPluginBase.cpp">
+      <Filter>Deform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.cpp">
+      <Filter>Deform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.cpp">
+      <Filter>Deform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\avg_edge_length.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\stb_image_write.c">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\texture_png.cpp">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\tga.cpp">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\ViewerTrackball.cpp">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\tinyxml2.cpp">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\shaders.cpp">
+      <Filter>Viewer\Util\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\PluginManager.cpp">
+      <Filter>Plugins</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,57 @@
+﻿Build started 2014/5/18 21:38:08.
+     1>Project "C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\libpng\libpng.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "x64\Release\libpng.unsuccessfulbuild".
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I"..\..\..\..\zlib-1.2.5" /Zi /nologo /W4 /WX /Ox /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /fp:except- /Zc:wchar_t- /Zc:forScope /Yc"pngpriv.h" /Fp"x64\Release\libpng16.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /FR"x64\Release\\" /Gd /TC /wd4996 /wd4127 /errorReport:prompt ..\..\..\png.c
+         png.c
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I"..\..\..\..\zlib-1.2.5" /Zi /nologo /W4 /WX /Ox /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _WINDLL /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /fp:except- /Zc:wchar_t- /Zc:forScope /Yu"pngpriv.h" /Fp"x64\Release\libpng16.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /FR"x64\Release\\" /Gd /TC /wd4996 /wd4127 /errorReport:prompt ..\..\..\pngerror.c ..\..\..\pngget.c ..\..\..\pngmem.c ..\..\..\pngpread.c ..\..\..\pngread.c ..\..\..\pngrio.c ..\..\..\pngrtran.c ..\..\..\pngrutil.c ..\..\..\pngset.c ..\..\..\pngtrans.c ..\..\..\pngwio.c ..\..\..\pngwrite.c ..\..\..\pngwtran.c ..\..\..\pngwutil.c
+         pngerror.c
+         pngget.c
+         pngmem.c
+         pngpread.c
+         pngread.c
+         pngrio.c
+         pngrtran.c
+         pngrutil.c
+         pngset.c
+         pngtrans.c
+         pngwio.c
+         pngwrite.c
+         pngwtran.c
+         pngwutil.c
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /l"0x0409" /nologo /fo"x64\Release\pngwin.res" ..\..\..\scripts\pngwin.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\libpng16.dll" /VERSION:"16" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\\" zlib.lib /MANIFEST /ManifestFile:"x64\Release\libpng16.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\libpng16.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\libpng16.lib" /MACHINE:X64 /DLL x64\Release\pngwin.res
+         x64\Release\png.obj
+         x64\Release\pngerror.obj
+         x64\Release\pngget.obj
+         x64\Release\pngmem.obj
+         x64\Release\pngpread.obj
+         x64\Release\pngread.obj
+         x64\Release\pngrio.obj
+         x64\Release\pngrtran.obj
+         x64\Release\pngrutil.obj
+         x64\Release\pngset.obj
+         x64\Release\pngtrans.obj
+         x64\Release\pngwio.obj
+         x64\Release\pngwrite.obj
+         x64\Release\pngwtran.obj
+         x64\Release\pngwutil.obj
+            Creating library C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\libpng16.lib and object C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\libpng16.exp
+         Generating code
+         Finished generating code
+         libpng.vcxproj -> C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\libpng16.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\libpng16.dll;#2" /manifest x64\Release\libpng16.dll.intermediate.manifest
+       BscMake:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o"C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\x64\Release\libpng16.bsc" x64\Release\png.sbr x64\Release\pngerror.sbr x64\Release\pngget.sbr x64\Release\pngmem.sbr x64\Release\pngpread.sbr x64\Release\pngread.sbr x64\Release\pngrio.sbr x64\Release\pngrtran.sbr x64\Release\pngrutil.sbr x64\Release\pngset.sbr x64\Release\pngtrans.sbr x64\Release\pngwio.sbr x64\Release\pngwrite.sbr x64\Release\pngwtran.sbr x64\Release\pngwutil.sbr
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\libpng.unsuccessfulbuild".
+         Touching "x64\Release\libpng.lastbuildstate".
+     1>Done Building Project "C:\WorkSpace\Visual Studio 2010\lim\external\lpng1610\projects\vstudio\libpng\libpng.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.39

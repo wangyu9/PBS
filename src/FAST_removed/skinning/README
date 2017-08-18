@@ -1,0 +1,20 @@
+Skinning
+Alec Jacobson
+
+Cocoa and GLUT applications wrapping the Skinning class for prototyping linear
+blend skinning and other real time deformations methods.
+
+Dependencies
+  igl_lib (IGL group's header library)
+    AntTweakBar (OpenGL GUI toolkit)
+    Eigen3 (matrix library)
+  Cocoa (UI on Mac OS X)
+  OpenGL (realtime rendering)
+  *GLUT (extra openGL utilities: displaying text)
+
+
+Compilation notes
+  Eigen's Block.h was giving some warnings, so I've temporarily turned of
+  warnings for implicitly converting 64-bit types to 32-bit types:
+  GCC_WARN_64_TO_32_BIT_CONVERSION
+  

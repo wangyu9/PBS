@@ -1,0 +1,2 @@
+C:\WorkSpace\Visual Studio 2010\PBS_project\PBS\external\glew-1.10.0\lib\Release\Win32
+C:\WorkSpace\Visual Studio 2010\PBS_project\PBS\external\freeglut-2.8.1-1\lib

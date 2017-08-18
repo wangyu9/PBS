@@ -1,0 +1,125 @@
+
+c:\depot\igl_repository\AutoDOF\Code\skinning\skinning\GLSL>cgc directionalperpixel.frag -oglsl -profile gp4fp 
+directionalperpixel.frag
+!!NVfp4.0
+# cgc version 3.0.0016, build date Feb 11 2011
+# command line args: -oglsl -profile gp4fp
+# source file: directionalperpixel.frag
+#vendor NVIDIA Corporation
+#version 3.0.0.16
+#profile gp4fp
+#program main
+#semantic gl_FrontMaterial : state.material.front
+#semantic gl_LightSource : state.light
+#var float4 gl_FrontMaterial.emission : state.material.front.emission :  : -1 : 0
+#var float4 gl_FrontMaterial.ambient : state.material.front.ambient :  : -1 : 0
+#var float4 gl_FrontMaterial.diffuse : state.material.front.diffuse :  : -1 : 0
+#var float4 gl_FrontMaterial.specular : state.material.front.specular :  : -1 : 0
+#var float gl_FrontMaterial.shininess : state.material.front.shininess :  : -1 : 0
+#var float4 gl_LightSource[0].ambient : state.light[0].ambient :  : -1 : 0
+#var float4 gl_LightSource[0].diffuse : state.light[0].diffuse :  : -1 : 0
+#var float4 gl_LightSource[0].specular : state.light[0].specular :  : -1 : 0
+#var float4 gl_LightSource[0].position : state.light[0].position :  : -1 : 0
+#var float4 gl_LightSource[0].halfVector : state.light[0].half :  : -1 : 0
+#var float3 gl_LightSource[0].spotDirection : state.light[0].spot.direction :  : -1 : 0
+#var float gl_LightSource[0].spotExponent : state.light[0].attenuation.w :  : -1 : 0
+#var float gl_LightSource[0].spotCutoff : state.light[0].spot.cutoff.x :  : -1 : 0
+#var float gl_LightSource[0].spotCosCutoff : state.light[0].spot.direction.w :  : -1 : 0
+#var float gl_LightSource[0].constantAttenuation : state.light[0].attenuation.x :  : -1 : 0
+#var float gl_LightSource[0].linearAttenuation : state.light[0].attenuation.y :  : -1 : 0
+#var float gl_LightSource[0].quadraticAttenuation : state.light[0].attenuation.z :  : -1 : 0
+#var float4 gl_LightSource[1].ambient : state.light[1].ambient :  : -1 : 0
+#var float4 gl_LightSource[1].diffuse : state.light[1].diffuse :  : -1 : 0
+#var float4 gl_LightSource[1].specular : state.light[1].specular :  : -1 : 0
+#var float4 gl_LightSource[1].position : state.light[1].position :  : -1 : 0
+#var float4 gl_LightSource[1].halfVector : state.light[1].half :  : -1 : 0
+#var float3 gl_LightSource[1].spotDirection : state.light[1].spot.direction :  : -1 : 0
+#var float gl_LightSource[1].spotExponent : state.light[1].attenuation.w :  : -1 : 0
+#var float gl_LightSource[1].spotCutoff : state.light[1].spot.cutoff.x :  : -1 : 0
+#var float gl_LightSource[1].spotCosCutoff : state.light[1].spot.direction.w :  : -1 : 0
+#var float gl_LightSource[1].constantAttenuation : state.light[1].attenuation.x :  : -1 : 0
+#var float gl_LightSource[1].linearAttenuation : state.light[1].attenuation.y :  : -1 : 0
+#var float gl_LightSource[1].quadraticAttenuation : state.light[1].attenuation.z :  : -1 : 0
+#var float4 gl_LightSource[2].ambient : state.light[2].ambient :  : -1 : 0
+#var float4 gl_LightSource[2].diffuse : state.light[2].diffuse :  : -1 : 0
+#var float4 gl_LightSource[2].specular : state.light[2].specular :  : -1 : 0
+#var float4 gl_LightSource[2].position : state.light[2].position :  : -1 : 0
+#var float4 gl_LightSource[2].halfVector : state.light[2].half :  : -1 : 0
+#var float3 gl_LightSource[2].spotDirection : state.light[2].spot.direction :  : -1 : 0
+#var float gl_LightSource[2].spotExponent : state.light[2].attenuation.w :  : -1 : 0
+#var float gl_LightSource[2].spotCutoff : state.light[2].spot.cutoff.x :  : -1 : 0
+#var float gl_LightSource[2].spotCosCutoff : state.light[2].spot.direction.w :  : -1 : 0
+#var float gl_LightSource[2].constantAttenuation : state.light[2].attenuation.x :  : -1 : 0
+#var float gl_LightSource[2].linearAttenuation : state.light[2].attenuation.y :  : -1 : 0
+#var float gl_LightSource[2].quadraticAttenuation : state.light[2].attenuation.z :  : -1 : 0
+#var float4 gl_LightSource[3].ambient : state.light[3].ambient :  : -1 : 0
+#var float4 gl_LightSource[3].diffuse : state.light[3].diffuse :  : -1 : 0
+#var float4 gl_LightSource[3].specular : state.light[3].specular :  : -1 : 0
+#var float4 gl_LightSource[3].position : state.light[3].position :  : -1 : 0
+#var float4 gl_LightSource[3].halfVector : state.light[3].half :  : -1 : 0
+#var float3 gl_LightSource[3].spotDirection : state.light[3].spot.direction :  : -1 : 0
+#var float gl_LightSource[3].spotExponent : state.light[3].attenuation.w :  : -1 : 0
+#var float gl_LightSource[3].spotCutoff : state.light[3].spot.cutoff.x :  : -1 : 0
+#var float gl_LightSource[3].spotCosCutoff : state.light[3].spot.direction.w :  : -1 : 0
+#var float gl_LightSource[3].constantAttenuation : state.light[3].attenuation.x :  : -1 : 0
+#var float gl_LightSource[3].linearAttenuation : state.light[3].attenuation.y :  : -1 : 0
+#var float gl_LightSource[3].quadraticAttenuation : state.light[3].attenuation.z :  : -1 : 0
+#var float4 gl_LightSource[4].ambient : state.light[4].ambient :  : -1 : 0
+#var float4 gl_LightSource[4].diffuse : state.light[4].diffuse :  : -1 : 0
+#var float4 gl_LightSource[4].specular : state.light[4].specular :  : -1 : 0
+#var float4 gl_LightSource[4].position : state.light[4].position :  : -1 : 0
+#var float4 gl_LightSource[4].halfVector : state.light[4].half :  : -1 : 0
+#var float3 gl_LightSource[4].spotDirection : state.light[4].spot.direction :  : -1 : 0
+#var float gl_LightSource[4].spotExponent : state.light[4].attenuation.w :  : -1 : 0
+#var float gl_LightSource[4].spotCutoff : state.light[4].spot.cutoff.x :  : -1 : 0
+#var float gl_LightSource[4].spotCosCutoff : state.light[4].spot.direction.w :  : -1 : 0
+#var float gl_LightSource[4].constantAttenuation : state.light[4].attenuation.x :  : -1 : 0
+#var float gl_LightSource[4].linearAttenuation : state.light[4].attenuation.y :  : -1 : 0
+#var float gl_LightSource[4].quadraticAttenuation : state.light[4].attenuation.z :  : -1 : 0
+#var float4 gl_LightSource[5].ambient : state.light[5].ambient :  : -1 : 0
+#var float4 gl_LightSource[5].diffuse : state.light[5].diffuse :  : -1 : 0
+#var float4 gl_LightSource[5].specular : state.light[5].specular :  : -1 : 0
+#var float4 gl_LightSource[5].position : state.light[5].position :  : -1 : 0
+#var float4 gl_LightSource[5].halfVector : state.light[5].half :  : -1 : 0
+#var float3 gl_LightSource[5].spotDirection : state.light[5].spot.direction :  : -1 : 0
+#var float gl_LightSource[5].spotExponent : state.light[5].attenuation.w :  : -1 : 0
+#var float gl_LightSource[5].spotCutoff : state.light[5].spot.cutoff.x :  : -1 : 0
+#var float gl_LightSource[5].spotCosCutoff : state.light[5].spot.direction.w :  : -1 : 0
+#var float gl_LightSource[5].constantAttenuation : state.light[5].attenuation.x :  : -1 : 0
+#var float gl_LightSource[5].linearAttenuation : state.light[5].attenuation.y :  : -1 : 0
+#var float gl_LightSource[5].quadraticAttenuation : state.light[5].attenuation.z :  : -1 : 0
+#var float4 gl_LightSource[6].ambient : state.light[6].ambient :  : -1 : 0
+#var float4 gl_LightSource[6].diffuse : state.light[6].diffuse :  : -1 : 0
+#var float4 gl_LightSource[6].specular : state.light[6].specular :  : -1 : 0
+#var float4 gl_LightSource[6].position : state.light[6].position :  : -1 : 0
+#var float4 gl_LightSource[6].halfVector : state.light[6].half :  : -1 : 0
+#var float3 gl_LightSource[6].spotDirection : state.light[6].spot.direction :  : -1 : 0
+#var float gl_LightSource[6].spotExponent : state.light[6].attenuation.w :  : -1 : 0
+#var float gl_LightSource[6].spotCutoff : state.light[6].spot.cutoff.x :  : -1 : 0
+#var float gl_LightSource[6].spotCosCutoff : state.light[6].spot.direction.w :  : -1 : 0
+#var float gl_LightSource[6].constantAttenuation : state.light[6].attenuation.x :  : -1 : 0
+#var float gl_LightSource[6].linearAttenuation : state.light[6].attenuation.y :  : -1 : 0
+#var float gl_LightSource[6].quadraticAttenuation : state.light[6].attenuation.z :  : -1 : 0
+#var float4 gl_LightSource[7].ambient : state.light[7].ambient :  : -1 : 0
+#var float4 gl_LightSource[7].diffuse : state.light[7].diffuse :  : -1 : 0
+#var float4 gl_LightSource[7].specular : state.light[7].specular :  : -1 : 0
+#var float4 gl_LightSource[7].position : state.light[7].position :  : -1 : 0
+#var float4 gl_LightSource[7].halfVector : state.light[7].half :  : -1 : 0
+#var float3 gl_LightSource[7].spotDirection : state.light[7].spot.direction :  : -1 : 0
+#var float gl_LightSource[7].spotExponent : state.light[7].attenuation.w :  : -1 : 0
+#var float gl_LightSource[7].spotCutoff : state.light[7].spot.cutoff.x :  : -1 : 0
+#var float gl_LightSource[7].spotCosCutoff : state.light[7].spot.direction.w :  : -1 : 0
+#var float gl_LightSource[7].constantAttenuation : state.light[7].attenuation.x :  : -1 : 0
+#var float gl_LightSource[7].linearAttenuation : state.light[7].attenuation.y :  : -1 : 0
+#var float gl_LightSource[7].quadraticAttenuation : state.light[7].attenuation.z :  : -1 : 0
+#var float4 gl_FragColor : $vout.COLOR : COL0[0] : -1 : 1
+#var float4 diffuse :  :  : -1 : 0
+#var float4 ambient :  :  : -1 : 0
+#var float3 normal : $vin.ATTR0 : ATTR0 : -1 : 0
+#var float3 lightDir : $vin.ATTR1 : ATTR1 : -1 : 0
+#var float3 halfVector :  :  : -1 : 0
+ATTRIB fragment_attrib[] = { fragment.attrib[0..1] };
+OUTPUT result_color0 = result.color;
+MOV.F result_color0, {0, 1}.xxyx;
+END
+# 1 instructions, 0 R-regs

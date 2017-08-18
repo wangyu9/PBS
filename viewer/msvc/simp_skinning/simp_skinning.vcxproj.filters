@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="old_bbw_demo.cpp" />
+    <ClCompile Include="targaImage.cpp" />
+    <ClCompile Include="..\..\..\src\Dirichlet_LIMSolver2D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Dirichlet_LIMSolver3D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\GreenStrain_LIMSolver2D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\GreenStrain_LIMSolver3D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Identity_LIMSolver2D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Identity_LIMSolver3D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Laplacian_LIMSolver2D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Laplacian_LIMSolver3D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\LGARAP_LIMSolver2D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\LGARAP_LIMSolver3D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\LIMSolver.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\LIMSolver2D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\LIMSolver3D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\LSConformal_LIMSolver2D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\NMSolver.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Poisson_LIMSolver2D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\UniformLaplacian_LIMSolver2D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\UniformLaplacian_LIMSolver3D.cpp">
+      <Filter>LIM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\wunderSVD\Procrustes.cpp">
+      <Filter>LIM\wunderSVD1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\wunderSVD\WunderSVD3x3.cpp">
+      <Filter>LIM\wunderSVD1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\msvc\skinning_interface.cpp" />
+    <ClCompile Include="..\..\src\plugins\DeformLocallyInjective.cpp">
+      <Filter>LIMDeform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\plugins\PickingPlugin.cpp" />
+    <ClCompile Include="gui_main.cpp" />
+    <ClCompile Include="..\..\..\src\FAST\skinning\arap_dof.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\arap_linear_block.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\Bone.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\BoneBoneCopyMap.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\draw_floor.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\malloc.c">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\MT19937F.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\newdel.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\optimize_index_buffer.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\uniform_sample.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\WunderSVD3x3.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\WunderSVD3x3_AVX.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FAST\skinning\WunderSVD3x3_SSE.cpp">
+      <Filter>FAST\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\tetgen\predicates.cxx">
+      <Filter>tetgen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\tetgen\tetgen.cxx">
+      <Filter>tetgen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\svd3x3\arap.cpp" />
+    <ClCompile Include="..\..\..\src\TriangleMesh.cpp">
+      <Filter>LIM_mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\TetrahedronMesh.cpp">
+      <Filter>LIM_mesh</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targaImage.h" />
+    <ClInclude Include="..\..\..\src\Dirichlet_LIMSolver2D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\Dirichlet_LIMSolver3D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\GreenStrain_LIMSolver2D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\GreenStrain_LIMSolver3D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\Identity_LIMSolver2D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\Identity_LIMSolver3D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\Laplacian_LIMSolver2D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\Laplacian_LIMSolver3D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\LGARAP_LIMSolver2D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\LGARAP_LIMSolver3D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\LIMSolver.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\LIMSolver2D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\LIMSolver3D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\LSConformal_LIMSolver2D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\NMSolver.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\UniformLaplacian_LIMSolver2D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\UniformLaplacian_LIMSolver3D.h">
+      <Filter>LIM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\wunderSVD\Procrustes.h">
+      <Filter>LIM\wunderSVD1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\wunderSVD\Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp">
+      <Filter>LIM\wunderSVD1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\wunderSVD\Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp">
+      <Filter>LIM\wunderSVD1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\wunderSVD\Singular_Value_Decomposition_Kernel_Declarations.hpp">
+      <Filter>LIM\wunderSVD1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\wunderSVD\Singular_Value_Decomposition_Main_Kernel_Body.hpp">
+      <Filter>LIM\wunderSVD1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\wunderSVD\Singular_Value_Decomposition_Preamble.hpp">
+      <Filter>LIM\wunderSVD1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\wunderSVD\WunderSVD3x3.h">
+      <Filter>LIM\wunderSVD1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\wunderSVD\wunder_polar_svd.h">
+      <Filter>LIM\wunderSVD1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\plugins\DeformLocallyInjective.h">
+      <Filter>LIMDeform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Animation.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\append_to_filename_before_extension.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\ArapEnergy.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\arap_dof.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\arap_linear_block.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\arap_rhs.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\BasicOpenGLView.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Bone.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\BoneBoneCopyMap.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\bone_roots_match.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\build_anttweakbar_modifier.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\ColorOption.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\columnize.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\copy_bone_roots_data.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\covariance_scatter_matrix.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\CTGALoader.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\DegreeOfFreedomType.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\destroy_bone_roots.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\discrete_iso_extra.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\distribute_transformations.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\draw_directed_line_segment.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\draw_floor.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\draw_mesh.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\draw_point.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Ease.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\eigen_glUniformMatrixXfv.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\ExtraWeight.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\fit_rotations.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_bones.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_displacements.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_fixed.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_free.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_positional_constraints_rhs.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_positional_constraints_system.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_rest_positions.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\gather_transformations.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\group_sum_matrix.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\inside_line_segment.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\inside_point.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\intersection.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\iso_extra.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\is_planar.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\lbs_matrix.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\lerp.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\load_tgf_and_dmat_pair_as_bone_roots_and_weights.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\malloc.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\matrix_from_string.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\max_weight_index.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\MT19937.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\optimize_index_buffer.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\partition.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\polar_dec.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\polar_svd.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\project_connect.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\project_extra_compact.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\project_to_line.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\pseudocolors_from_weights.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Quat.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\read_BF.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\read_TGF.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\region_colors_from_weights.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\right_axis.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\ShaderMode.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Singular_Value_Decomposition_Kernel_Declarations.hpp">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Singular_Value_Decomposition_Main_Kernel_Body.hpp">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Singular_Value_Decomposition_Preamble.hpp">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\skinningAppDelegate.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\SkinningCallback.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\sort_weights.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Tform.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\theDarkSideOfEigen.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\tokenize_str.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\uncolumnize.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\uniform_sample.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\up_axis.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\vcacheopt.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Vec.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\ViewVector.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\view_axis.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\Widget.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\write_BF.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\WunderSVD3x3.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\WunderSVD3x3_AVX.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\WunderSVD3x3_SSE.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\FAST\skinning\wunder_polar_svd.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\msvc\FASTSkinning.h">
+      <Filter>FAST\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\tetgen\tetgen.h">
+      <Filter>tetgen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\DeformableMesh.h">
+      <Filter>LIM_mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TriangleMesh.h">
+      <Filter>LIM_mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\TetrahedronMesh.h">
+      <Filter>LIM_mesh</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="LIM">
+      <UniqueIdentifier>{5cfb8d10-0d92-4bbd-a830-6a54250fd23f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIMDeform">
+      <UniqueIdentifier>{925b6df9-3919-48ce-ab7a-68609e7f82dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FAST">
+      <UniqueIdentifier>{bfa69607-edef-4b56-a528-1e4ace681db1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FAST\Source">
+      <UniqueIdentifier>{adb44a25-6981-4983-a534-25720a22dadb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FAST\Header">
+      <UniqueIdentifier>{f45884b5-254a-4e23-b092-aba360ada175}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIM\wunderSVD1">
+      <UniqueIdentifier>{8030cd06-4184-45ba-bca0-ad18cc95846b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tetgen">
+      <UniqueIdentifier>{1b68cb37-e54c-42d6-b559-e69a745c054c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIM_mesh">
+      <UniqueIdentifier>{82dac114-a35f-41cb-9d68-a5a7c03bd96a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
