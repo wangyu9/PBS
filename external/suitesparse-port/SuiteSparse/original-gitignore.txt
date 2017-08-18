@@ -1,0 +1,9 @@
+##  Moved here to mute by wangyu to include the files in repo. 
+## Oringinal files:
+
+# Ignore all:
+*
+
+# Except:
+!.gitignore
+# The rest of previously existing files

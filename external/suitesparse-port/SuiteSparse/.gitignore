@@ -1,6 +1,1 @@
-##  This is muted by wangyu to include the files in repo. # Ignore all:
-*
-
-# Except:
-!.gitignore
-# The rest of previously existing files
+## This has been modified by wangyu.
