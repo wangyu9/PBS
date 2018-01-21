@@ -369,8 +369,10 @@ public:
 	}
 	MeshDrawingType meshDrawingType;
 
+#ifdef USE_MATLAB
 	bool send_status_to_matlab() const;
 	bool send_color_to_matlab() const;
+#endif
 
 	void update_normal(NormalUpdateMethod method);
 

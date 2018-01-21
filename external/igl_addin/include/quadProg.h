@@ -14,6 +14,8 @@
 //	const Eigen::PlainObjectBase<DerivedBeq> & Beq,
 //	Eigen::PlainObjectBase<DerivedZ> & Z);
 
+#ifdef USE_MATLAB
+
 #include <igl/matlab/matlabinterface.h>
 
 inline bool quadprog(
@@ -45,5 +47,7 @@ inline bool quadprog(
 
 	return true;
 }
+
+#endif
 
 #endif

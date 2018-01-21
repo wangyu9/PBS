@@ -53,8 +53,10 @@ void MeshDisplayUI::init(const std::string& name)
 		bar->TwAddButton("Save Tets", save_dialog_tets, this,
 			" group='Load & Save'"
 			" label='Save tets'");// added by wangyu
+
+#ifdef USE_MATLAB
 		bar->TwAddButton("Send Status to Matlab", SendStatusToMatlabCB, this, " group='Load & Save'");//added by wangyu
-																									  // ---------------------- Overlays ----------------------
+#endif																									  // ---------------------- Overlays ----------------------
 		bar->TwAddVarRW("Wireframe", TW_TYPE_BOOLCPP, &show_lines,
 			" group='Overlays'"
 			" label='Wireframe' key=l help='Toggle wire frame of mesh'");
@@ -120,9 +122,9 @@ void MeshDisplayUI::init(const std::string& name)
 		TwType colorBarT = TwDefineEnum("Color Bar Type", colorBarTypeEV, NUM_OF_COLORBAR_TYPE);
 		bar->TwAddVarCB("Color Bar Type", colorBarT, SetColorBarTypeCB, GetColorBarTypeCB, this, " group='Draw options'");
 
-
+#ifdef USE_MATLAB
 		bar->TwAddButton("Send Color to MATALB", SendColorToMatlabCB, this, " group='Draw options'");
-
+#endif
 
 		bar->TwAddVarRW("Trackball", TW_TYPE_BOOLCPP, &show_trackball,
 			" group='Scene'"
@@ -214,10 +216,12 @@ void TW_CALL CLASS_NAME::open_dialog_property(void *clientData)
 
 }
 
+#ifdef USE_MATLAB
 void TW_CALL CLASS_NAME::SendStatusToMatlabCB(void *clientData)
 {
 	static_cast<CLASS_NAME *>(clientData)->send_status_to_matlab();
 }
+#endif
 
 void TW_CALL CLASS_NAME::SetShowTextureCB(const void *value, void *clientData)
 {

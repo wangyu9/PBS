@@ -4,8 +4,9 @@
 #define IGL_HEADER_ONLY 
 #endif
 
+#ifdef USE_MATLAB
 #include <igl/matlab/matlabinterface.h>
-
+#endif
 
 
 //template <typename DerivedQ, typename Derivedf, typename DerivedAeq, typename DerivedBeq, typename DerivedZ>

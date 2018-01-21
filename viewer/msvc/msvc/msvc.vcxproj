@@ -124,7 +124,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\Program Files\MATLAB\R2015b\extern\lib\win64\microsoft;C:\Program Files\Mosek\7\tools\platform\win64x86\bin;C:\WorkSpace\Tools\HDF_Group\HDF5\1.8.15\lib;..\..\..\external\suitesparse-port\lapack_windows\x64;..\..\..\external\suitesparse-port\lib\x64\Release;..\..\..\external\AntTweakBar\lib\;..\..\..\external\freeglut-2.8.1-1\lib\x64\;..\..\..\external\glew-1.10.0\lib\Release\x64\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libblas.lib;liblapack.lib;libamd.lib;libccolamd.lib;libcxsparse.lib;libspqr.lib;libbtf.lib;libcholmod.lib;libklu.lib;libumfpack.lib;libcamd.lib;libcolamd.lib;libldl.lib;suitesparseconfig.lib;hdf5.lib;hdf5_cpp.lib;glew32.lib;freeglut.lib;AntTweakBar64.lib;libmx.lib;libmat.lib;libeng.lib;mosek64_7_1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libblas.lib;liblapack.lib;libamd.lib;libccolamd.lib;libcxsparse.lib;libspqr.lib;libbtf.lib;libcholmod.lib;libklu.lib;libumfpack.lib;libcamd.lib;libcolamd.lib;libldl.lib;suitesparseconfig.lib;hdf5.lib;hdf5_cpp.lib;glew32.lib;freeglut.lib;AntTweakBar64.lib;mosek64_7_1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>libpng16.dll</LinkLibraryDependencies>
@@ -178,7 +178,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>D:\Program Files\MATLAB\R2015b\extern\lib\win64\microsoft;C:\Program Files\Mosek\7\tools\platform\win64x86\bin;C:\WorkSpace\Tools\HDF_Group\HDF5\1.8.15\lib;..\..\..\external\suitesparse-port\lapack_windows\x64;..\..\..\external\suitesparse-port\lib\x64\Release;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libblas.lib;liblapack.lib;libamd.lib;libccolamd.lib;libcxsparse.lib;libspqr.lib;libbtf.lib;libcholmod.lib;libklu.lib;libumfpack.lib;libcamd.lib;libcolamd.lib;libldl.lib;suitesparseconfig.lib;hdf5.lib;hdf5_cpp.lib;..\..\..\external\freeglut-2.8.1-1\lib\x64\freeglut.lib;..\..\..\external\glew-1.10.0\lib\Release\x64\glew32.lib;..\..\..\external\AntTweakBar\lib\AntTweakBar64.lib;libmx.lib;libmat.lib;libeng.lib;mosek64_7_1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libblas.lib;liblapack.lib;libamd.lib;libccolamd.lib;libcxsparse.lib;libspqr.lib;libbtf.lib;libcholmod.lib;libklu.lib;libumfpack.lib;libcamd.lib;libcolamd.lib;libldl.lib;suitesparseconfig.lib;hdf5.lib;hdf5_cpp.lib;..\..\..\external\freeglut-2.8.1-1\lib\x64\freeglut.lib;..\..\..\external\glew-1.10.0\lib\Release\x64\glew32.lib;..\..\..\external\AntTweakBar\lib\AntTweakBar64.lib;mosek64_7_1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>
       </ImportLibrary>
     </Link>
@@ -213,11 +213,8 @@
     <ClInclude Include="..\..\..\external\igl_addin\include\utils\TimerWrapper.h" />
     <ClInclude Include="..\..\..\external\igl_addin\include\utils\ViewerTrackball.h" />
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\Camera.h" />
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.h" />
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\ControlUnit.h" />
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.h" />
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.h" />
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.h" />
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.h" />
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\Mesh.h" />
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\MeshData.h" />
@@ -231,7 +228,6 @@
     <ClInclude Include="..\..\..\external\libigl\include\igl\cotmatrix_entries.h" />
     <ClInclude Include="..\..\..\external\libigl\include\igl\face_occurrences.h" />
     <ClInclude Include="..\..\..\external\libigl\include\igl\invert_diag.h" />
-    <ClInclude Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.h" />
     <ClInclude Include="..\..\..\external\libigl\include\igl\normal_derivative.h" />
     <ClInclude Include="..\..\..\external\libigl\include\igl\on_boundary.h" />
     <ClInclude Include="..\..\..\external\libigl\include\igl\slice_into.h" />
@@ -253,7 +249,6 @@
     <ClInclude Include="..\..\..\external\zlib-1.2.5\zconf.h" />
     <ClInclude Include="..\..\..\external\zlib-1.2.5\zlib.h" />
     <ClInclude Include="..\..\..\external\zlib-1.2.5\zutil.h" />
-    <ClInclude Include="..\..\..\src\MATLAB\matlab.h" />
     <ClInclude Include="..\..\src\Camera.h" />
     <ClInclude Include="..\..\src\Mesh.h" />
     <ClInclude Include="..\..\src\plugins\Deform.h" />
@@ -282,7 +277,6 @@
     <ClCompile Include="..\..\..\external\igl_addin\include\physicsSolver.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\picking_util.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\PluginManager.cpp" />
-    <ClCompile Include="..\..\..\external\igl_addin\include\print_matlab.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\quadProg.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\quadSolver.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\readH5MAT.cpp" />
@@ -299,11 +293,8 @@
     <ClCompile Include="..\..\..\external\igl_addin\include\utils\ViewerTrackball.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\vf.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\Camera.cpp" />
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\ControlUnit.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.cpp" />
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.cpp" />
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\main.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\Mesh.cpp" />
@@ -340,7 +331,6 @@
     <ClCompile Include="..\..\..\external\libigl\include\igl\lbs_matrix.cpp" />
     <ClCompile Include="..\..\..\external\libigl\include\igl\list_to_matrix.cpp" />
     <ClCompile Include="..\..\..\external\libigl\include\igl\massmatrix.cpp" />
-    <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp" />
     <ClCompile Include="..\..\..\external\libigl\include\igl\matrix_to_list.cpp" />
     <ClCompile Include="..\..\..\external\libigl\include\igl\mat_to_quat.cpp" />
     <ClCompile Include="..\..\..\external\libigl\include\igl\max_size.cpp" />
@@ -413,7 +403,6 @@
     <ClCompile Include="..\..\..\external\zlib-1.2.5\trees.c" />
     <ClCompile Include="..\..\..\external\zlib-1.2.5\uncompr.c" />
     <ClCompile Include="..\..\..\external\zlib-1.2.5\zutil.c" />
-    <ClCompile Include="..\..\..\src\MATLAB\matlab.cpp" />
     <ClCompile Include="..\..\src\ExplicitTemplate.cpp" />
   </ItemGroup>
   <ItemGroup>

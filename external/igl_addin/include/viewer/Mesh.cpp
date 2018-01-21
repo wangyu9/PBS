@@ -2080,6 +2080,8 @@ void MeshDisplay::load_shader()
 	printProgramInfoLog(s_pbsShaderProgram.p);
 }
 
+#ifdef USE_MATLAB
+
 #include <print_matlab.h>
 
 bool MeshDisplay::send_status_to_matlab() const
@@ -2104,4 +2106,4 @@ bool MeshDisplay::send_color_to_matlab() const
 	return true;
 }
 
-
+#endif

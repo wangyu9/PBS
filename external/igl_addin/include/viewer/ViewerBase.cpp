@@ -49,7 +49,7 @@ using namespace std;
 #define IGL_HEADER_ONLY 
 #endif
 
-
+#include "FileDialog.h"
 
 #include "igl/readDMAT.h"//wangyu
 
@@ -69,7 +69,7 @@ using namespace std;
 
 
 
-#include "../plugins/DeformSkinning.h"//wangyu
+//#include "../plugins/DeformSkinning.h"//wangyu
 
 #include "math_helper.h"
 //

@@ -96,9 +96,6 @@
     <ClInclude Include="..\..\src\types.h">
       <Filter>Viewer\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\MATLAB\matlab.h">
-      <Filter>Viewer\Util\MATLAB</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\external\libigl\external\yimg\YImage.hpp">
       <Filter>IGL\YImage</Filter>
     </ClInclude>
@@ -165,15 +162,6 @@
     <ClInclude Include="..\..\..\external\igl_addin\include\physicsSolver.h">
       <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\external\igl_addin\include\quadSolver.h">
-      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\external\igl_addin\include\quadProg.h">
-      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.h">
-      <Filter>IGL</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\external\igl_addin\include\eigen_helper.h">
       <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
     </ClInclude>
@@ -231,12 +219,6 @@
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.h">
       <Filter>Deform\Direct</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.h">
-      <Filter>Deform\Phys</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.h">
-      <Filter>Deform\Skinning</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\Camera.h">
       <Filter>Viewer\Source Files</Filter>
     </ClInclude>
@@ -256,9 +238,6 @@
       <Filter>IGLADDIN\Main</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\PickingPluginBase.h">
-      <Filter>Deform</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.h">
       <Filter>Deform</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.h">
@@ -303,11 +282,14 @@
     <ClInclude Include="..\..\..\external\igl_addin\include\PluginManager.h">
       <Filter>Plugins</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\quadProg.h">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\quadSolver.h">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\src\MATLAB\matlab.cpp">
-      <Filter>Viewer\Util\MATLAB</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\external\libigl\external\yimg\YImage.cpp">
       <Filter>IGL\YImage</Filter>
     </ClCompile>
@@ -422,12 +404,6 @@
     <ClCompile Include="..\..\..\external\igl_addin\include\physicsSolver.cpp">
       <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\quadProg.cpp">
-      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\quadSolver.cpp">
-      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\picking_util.cpp">
       <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
     </ClCompile>
@@ -440,14 +416,8 @@
     <ClCompile Include="..\..\..\external\libigl\include\igl\adjacency_list.cpp">
       <Filter>IGL</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp">
-      <Filter>IGL</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\external\libigl\include\igl\polar_svd.cpp">
       <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\print_matlab.cpp">
-      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\readHANDLE.cpp">
       <Filter>IGLADDIN\IGLADDIN_WITH_HEADERMODE</Filter>
@@ -710,12 +680,6 @@
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.cpp">
       <Filter>Deform\Direct</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.cpp">
-      <Filter>Deform\Phys</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.cpp">
-      <Filter>Deform\Skinning</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\Camera.cpp">
       <Filter>Viewer\Source Files</Filter>
     </ClCompile>
@@ -738,9 +702,6 @@
       <Filter>IGLADDIN\Main</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\PickingPluginBase.cpp">
-      <Filter>Deform</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.cpp">
       <Filter>Deform</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.cpp">
@@ -769,6 +730,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\PluginManager.cpp">
       <Filter>Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\quadProg.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\quadSolver.cpp">
+      <Filter>IGLADDIN\IGLADDIN_NO_HEADERMODE</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

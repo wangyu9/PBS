@@ -38,8 +38,9 @@ public:
 	static void TW_CALL save_dialog_tets(void *clientData);//wangyu
 
 	static void TW_CALL ReLoadShader(void *clientData);//wangyu
+#ifdef USE_MATLAB
 	static void TW_CALL SendStatusToMatlabCB(void *clientData);//wangyu
-
+#endif
 	static void TW_CALL compile_dialog_mesh(void *clientData);
 
 	static void TW_CALL open_dialog_pose_mesh(void *clientData);
@@ -54,11 +55,12 @@ public:
 	{
 		*static_cast<MeshDrawingType *>(value) = static_cast<const CLASS_NAME*>(clientData)->GetMeshDrawingType();
 	}
+#ifdef USE_MATLAB
 	static void TW_CALL SendColorToMatlabCB(void *clientData)
 	{
 		static_cast<CLASS_NAME*>(clientData)->send_color_to_matlab();
 	}
-
+#endif
 	static void TW_CALL SetColorBarTypeCB(const void *value, void *clientData)
 	{
 		static_cast<CLASS_NAME*>(clientData)->SetColorBarType(*static_cast<const ColorBarType *>(value));

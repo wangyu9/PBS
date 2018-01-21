@@ -2149,7 +2149,13 @@ void PickingPluginBase::update_keyframing_selection()
 							  //selected_vertices_moved();
 }
 
-
+void local_print_out_argv(const std::vector<std::string> &cl)
+{
+	for (size_t i = 0; i < cl.size(); i++)
+	{
+		printf("  %s", cl[i]);
+	}
+}
 
 #include <viewer/CommandLineBase.h>
 bool CommandLine(PickingPluginBase& plugin, std::vector<std::string> cl)
@@ -2162,7 +2168,7 @@ bool CommandLine(PickingPluginBase& plugin, std::vector<std::string> cl)
 	else
 	{
 		printf("PickingPlugin");
-		print_out_argv(cl);
+		local_print_out_argv(cl); // todo, replace this with print_out_argv in CommandLineBase.h later
 		printf("\n");
 	}
 
