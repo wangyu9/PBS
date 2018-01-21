@@ -130,6 +130,7 @@
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBase.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBaseUI.cpp" />
     <ClCompile Include="..\..\src\DeformMatlab.cpp" />
+    <ClCompile Include="..\..\src\plugins\PickingPlugin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBase.h" />

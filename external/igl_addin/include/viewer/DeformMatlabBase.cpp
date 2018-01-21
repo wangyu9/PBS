@@ -1,8 +1,9 @@
 #include "DeformMatlabBase.h"
+#include "matlab_folder_path.h"
 
 DeformMatlabBase::DeformMatlabBase()
 {
-	matlab_init();
+	matlab_init(MATLAB_FOLDER_PATH);
 
 	run_solver = false;
 	is_mesh_loaded = false;
@@ -53,14 +54,14 @@ void DeformMatlabBase::RestartSolver()
 }
 
 /************Start of Matlab related***********/
-void DeformMatlabBase::matlab_init(const std::string MATLAB_FOLDER_PATH)
+void DeformMatlabBase::matlab_init(const std::string matlab_path)
 {
 	using namespace igl::matlab;
 
 	matlabEngine = new (Engine*);
 	mlinit(matlabEngine);
 
-	std::string str_cd_folder = std::string("cd ") + std::string(MATLAB_FOLDER_PATH);
+	std::string str_cd_folder = std::string("cd ") + std::string(matlab_path);
 	mleval(matlabEngine, str_cd_folder);
 	// Clear the WorkSpace
 	mleval(matlabEngine, "clear;");

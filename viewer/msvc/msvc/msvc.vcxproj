@@ -124,7 +124,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\Program Files\MATLAB\R2015b\extern\lib\win64\microsoft;C:\Program Files\Mosek\7\tools\platform\win64x86\bin;C:\WorkSpace\Tools\HDF_Group\HDF5\1.8.15\lib;..\..\..\external\suitesparse-port\lapack_windows\x64;..\..\..\external\suitesparse-port\lib\x64\Release;..\..\..\external\AntTweakBar\lib\;..\..\..\external\freeglut-2.8.1-1\lib\x64\;..\..\..\external\glew-1.10.0\lib\Release\x64\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libblas.lib;liblapack.lib;libamd.lib;libccolamd.lib;libcxsparse.lib;libspqr.lib;libbtf.lib;libcholmod.lib;libklu.lib;libumfpack.lib;libcamd.lib;libcolamd.lib;libldl.lib;suitesparseconfig.lib;pthreadVC2.lib;hdf5.lib;hdf5_cpp.lib;glew32.lib;freeglut.lib;AntTweakBar64.lib;libmx.lib;libmat.lib;libeng.lib;mosek64_7_1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libblas.lib;liblapack.lib;libamd.lib;libccolamd.lib;libcxsparse.lib;libspqr.lib;libbtf.lib;libcholmod.lib;libklu.lib;libumfpack.lib;libcamd.lib;libcolamd.lib;libldl.lib;suitesparseconfig.lib;hdf5.lib;hdf5_cpp.lib;glew32.lib;freeglut.lib;AntTweakBar64.lib;libmx.lib;libmat.lib;libeng.lib;mosek64_7_1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>libpng16.dll</LinkLibraryDependencies>
@@ -178,7 +178,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>D:\Program Files\MATLAB\R2015b\extern\lib\win64\microsoft;C:\Program Files\Mosek\7\tools\platform\win64x86\bin;C:\WorkSpace\Tools\HDF_Group\HDF5\1.8.15\lib;..\..\..\external\suitesparse-port\lapack_windows\x64;..\..\..\external\suitesparse-port\lib\x64\Release;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libblas.lib;liblapack.lib;libamd.lib;libccolamd.lib;libcxsparse.lib;libspqr.lib;libbtf.lib;libcholmod.lib;libklu.lib;libumfpack.lib;libcamd.lib;libcolamd.lib;libldl.lib;suitesparseconfig.lib;pthreadVC2.lib;hdf5.lib;hdf5_cpp.lib;..\..\..\external\freeglut-2.8.1-1\lib\x64\freeglut.lib;..\..\..\external\glew-1.10.0\lib\Release\x64\glew32.lib;..\..\..\external\AntTweakBar\lib\AntTweakBar64.lib;libmx.lib;libmat.lib;libeng.lib;mosek64_7_1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libblas.lib;liblapack.lib;libamd.lib;libccolamd.lib;libcxsparse.lib;libspqr.lib;libbtf.lib;libcholmod.lib;libklu.lib;libumfpack.lib;libcamd.lib;libcolamd.lib;libldl.lib;suitesparseconfig.lib;hdf5.lib;hdf5_cpp.lib;..\..\..\external\freeglut-2.8.1-1\lib\x64\freeglut.lib;..\..\..\external\glew-1.10.0\lib\Release\x64\glew32.lib;..\..\..\external\AntTweakBar\lib\AntTweakBar64.lib;libmx.lib;libmat.lib;libeng.lib;mosek64_7_1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>
       </ImportLibrary>
     </Link>
