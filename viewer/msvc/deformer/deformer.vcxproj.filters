@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="IGL">
+      <UniqueIdentifier>{afe62a63-ba9b-405f-8a84-97afa9130874}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGLADDIN">
+      <UniqueIdentifier>{532c6cdb-bcf7-4679-9f52-9584197c36cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\external\igl_addin\include\compute_weights.cpp">
@@ -78,9 +84,6 @@
     <ClCompile Include="..\..\..\external\igl_addin\include\picking_util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\print_matlab.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\quadProg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -115,12 +118,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.cpp">
@@ -226,9 +223,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\libigl\include\igl\massmatrix.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\libigl\include\igl\matrix_to_list.cpp">
@@ -447,18 +441,12 @@
     <ClCompile Include="..\..\..\external\zlib-1.2.5\zutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\MATLAB\matlab.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\ExplicitTemplate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBase.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBaseUI.cpp" />
     <ClCompile Include="..\..\src\DeformMatlab.cpp" />
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\PickingPluginBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -484,6 +472,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\plugins\PickingPlugin.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.cpp">
+      <Filter>IGLADDIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\print_matlab.cpp">
+      <Filter>IGLADDIN</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\external\igl_addin\external\eigen3-hdf5\eigen3-hdf5.hpp">
@@ -531,12 +528,6 @@
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -571,9 +562,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\external\libigl\include\igl\invert_diag.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\external\libigl\include\igl\normal_derivative.h">
@@ -639,9 +627,6 @@
     <ClInclude Include="..\..\..\external\zlib-1.2.5\zutil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\MATLAB\matlab.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -657,9 +642,6 @@
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBase.h" />
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBaseUI.h" />
     <ClInclude Include="..\..\src\DeformMatlab.h" />
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\PickingPluginBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -701,6 +683,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\external\igl_addin\include\utils\ViewerTrackball.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.h">
+      <Filter>IGLADDIN</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\print_matlab.h">
+      <Filter>IGLADDIN</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

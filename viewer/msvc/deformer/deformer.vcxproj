@@ -90,10 +90,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;USE_MATLAB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libmx.lib;libmat.lib;libeng.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -118,23 +119,30 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;USE_MATLAB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libmx.lib;libmat.lib;libeng.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\external\igl_addin\include\print_matlab.cpp" />
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBase.cpp" />
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBaseUI.cpp" />
+    <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp" />
     <ClCompile Include="..\..\src\DeformMatlab.cpp" />
     <ClCompile Include="..\..\src\plugins\PickingPlugin.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\external\igl_addin\include\print_matlab.h" />
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.h" />
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBase.h" />
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformMatlabBaseUI.h" />
+    <ClInclude Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.h" />
     <ClInclude Include="..\..\src\DeformMatlab.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

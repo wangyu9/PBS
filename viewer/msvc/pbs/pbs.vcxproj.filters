@@ -28,6 +28,9 @@
     <Filter Include="IGLADDIN">
       <UniqueIdentifier>{0ae79101-a58e-4c85-8748-77faf0bc250c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="IGL">
+      <UniqueIdentifier>{b2eb3a47-5707-4882-9c92-552a2fbd11ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\external\igl_addin\include\compute_weights.cpp">
@@ -508,7 +511,7 @@
       <Filter>IGLADDIN</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp">
-      <Filter>IGLADDIN</Filter>
+      <Filter>IGL</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -741,7 +744,7 @@
       <Filter>IGLADDIN</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.h">
-      <Filter>IGLADDIN</Filter>
+      <Filter>IGL</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

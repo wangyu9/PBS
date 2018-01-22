@@ -25,6 +25,12 @@
     <Filter Include="A\MultiPhys">
       <UniqueIdentifier>{6edd2d23-e128-4775-b266-77fa67c5b7b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="IGL">
+      <UniqueIdentifier>{1198e1f2-400d-4fcc-bc16-b1eb01a7b007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IGLADDIN">
+      <UniqueIdentifier>{357240ce-8e83-4bf5-b99f-7785b5bab703}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\external\igl_addin\include\compute_weights.cpp">
@@ -90,9 +96,6 @@
     <ClCompile Include="..\..\..\external\igl_addin\include\picking_util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\print_matlab.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\quadProg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -127,12 +130,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.cpp">
@@ -241,9 +238,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\libigl\include\igl\massmatrix.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\libigl\include\igl\matrix_to_list.cpp">
@@ -462,38 +456,11 @@
     <ClCompile Include="..\..\..\external\zlib-1.2.5\zutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\MATLAB\matlab.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\ExplicitTemplate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\PluginManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\utils\shaders.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\utils\stb_image_write.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\utils\texture_png.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\utils\tga.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\utils\tinyxml2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\utils\ViewerTrackball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\multigrid\CommandLineMulti.cpp">
       <Filter>A</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\multigrid\PickingPluginMG.cpp">
       <Filter>A</Filter>
@@ -536,6 +503,36 @@
     </ClCompile>
     <ClCompile Include="..\..\..\external\igl_addin\include\finite_element_solver.cpp">
       <Filter>A\MultiPhys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\PluginManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\shaders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\tinyxml2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\stb_image_write.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\texture_png.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\tga.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\utils\ViewerTrackball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp">
+      <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.cpp">
+      <Filter>IGLADDIN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\print_matlab.cpp">
+      <Filter>IGLADDIN</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -584,12 +581,6 @@
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformDirectBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformPhysBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\DeformSkinningBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\external\igl_addin\include\viewer\HandlePluginBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -627,9 +618,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\external\libigl\include\igl\invert_diag.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\external\libigl\include\igl\normal_derivative.h">
@@ -695,25 +683,10 @@
     <ClInclude Include="..\..\..\external\zlib-1.2.5\zutil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\MATLAB\matlab.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\GLSL\directionalperpixel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\GLSL\directionalperpixelcolor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\GLSL\isolines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\Mesh.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\PluginManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\plugins\Deform.h">
@@ -722,41 +695,8 @@
     <ClInclude Include="..\..\src\types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\utils\FileDialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\utils\matlabIO.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\utils\shaders.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\utils\stb_image_write.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\utils\texture_png.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\utils\tga.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\utils\TimerWrapper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\utils\tinyxml2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\utils\ViewerTrackball.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\ViewerPlugin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\multigrid\CommandLineMulti.h">
       <Filter>A</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\multigrid\PickingPluginMG.h">
       <Filter>A</Filter>
@@ -799,6 +739,54 @@
     </ClInclude>
     <ClInclude Include="..\..\..\external\igl_addin\include\finite_element_solver.h">
       <Filter>A\MultiPhys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\GLSL\directionalperpixel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\GLSL\directionalperpixelcolor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\GLSL\isolines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\PluginManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\shaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\tinyxml2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\FileDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\matlabIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\stb_image_write.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\texture_png.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\tga.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\TimerWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\utils\ViewerTrackball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.h">
+      <Filter>IGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\viewer\CommandLineBase.h">
+      <Filter>IGLADDIN</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\igl_addin\include\print_matlab.h">
+      <Filter>IGLADDIN</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
