@@ -323,6 +323,78 @@ bool DeformSkinning::load_weights_from_MATLAB()
 	return true;
 }
 
+#include <extension_from_name.h>
+#include <igl/readDMAT.h>
+bool DeformSkinning::load_weights_from_file2(const char* weights_file_name)
+{
+	std::string extension = extension_from_name(weights_file_name);
+	Eigen::MatrixXd newW;
+
+	switch (skinningType)
+	{
+	case LBS:
+	case DQLBS:
+	case PBS:
+	case None:
+	{
+
+		if (extension == "dmat")
+		{
+			igl::readDMAT(weights_file_name, newW);
+		}
+		else if (extension == "h5")
+		{
+#ifdef SUPPORT_HDF5_MAT
+			readH5MAT(weights_file_name, newW);
+#else
+			printf("Unknown weights file type %s", weights_file_name);
+			return false;
+#endif
+		}
+		else
+		{
+			printf("Unknown weights file type %s", weights_file_name);
+			return false;
+		}
+
+		if (newW.cols() == 0)
+		{
+			printf("Load Weights fails!\n");
+			return false;
+		}
+
+		set_weights(newW, "From file");
+
+		printf("Load Weights Matrix from file. :(%d,%d).\n", Weights.rows(), Weights.cols());
+	}
+	break;
+	case HS:
+	{
+		const Eigen::MatrixXd& V_rest = m_preview3d->GetMainMesh().rest_vertices;
+
+		igl::readDMAT(weights_file_name, M3d_hs);
+
+		if (M3d_hs.cols() == 0)
+		{
+			printf("Load Hybrid Skinning Weights Fails!\n");
+			return false;
+		}
+
+		HandlePlugin::GetReference().recover_M2d_from_M3d(M3d_hs, M2d_hs);
+		//print_matlab("M2d_hs",M2d_hs);
+		// only calculate and load M3d_hs
+		printf("Load Hybrid Skinning Weights Matrix from MATLAB:(%d,%d).\n", M3d_hs.rows(), M3d_hs.cols());
+
+		do_this_when_only_M_loaded();
+	}
+	break;
+	}
+
+	update_skinning = true;
+
+	return true;
+}
+
 void DeformSkinning::init(Preview3D *preview)
 {
 	bool init_antweakbar = (bar == NULL);
@@ -399,6 +471,15 @@ bool CommandLine(DeformSkinning& plugin, std::vector<std::string> cl)
 			return false;
 		}
 		return plugin.load_weights_from_file(cl[1].c_str());
+	}
+	else if (cl[0] == std::string("load_weights_from_file2"))
+	{
+		if (cl.size() < 2)
+		{
+			printf("Error: No file name for load_weights_from_file2.\n");
+			return false;
+		}
+		return plugin.load_weights_from_file2(cl[1].c_str());
 	}
 	else if (cl[0] == std::string("set_skinning_type"))
 	{

@@ -19,9 +19,6 @@
     <Filter Include="Addtional">
       <UniqueIdentifier>{5447f63c-664e-431f-b529-27d686d02f27}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Addtional\Skinning">
-      <UniqueIdentifier>{b894f91b-bccd-4b02-b0b5-5576c5215999}</UniqueIdentifier>
-    </Filter>
     <Filter Include="MATLAB">
       <UniqueIdentifier>{0b62fb06-35d3-400e-8d93-5a4f59a5299f}</UniqueIdentifier>
     </Filter>
@@ -512,6 +509,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\external\libigl\include\igl\matlab\matlabinterface.cpp">
       <Filter>IGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\igl_addin\include\extension_from_name.cpp">
+      <Filter>IGLADDIN</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
