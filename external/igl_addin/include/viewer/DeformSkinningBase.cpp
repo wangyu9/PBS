@@ -37,14 +37,17 @@
 //#include "igl/boundary_faces.h"
 #include <igl/boundary_facets.h>
 
-
+#ifdef USE_MATLAB_ENGINE
 #include <igl/matlab/matlabinterface.h>
+#endif
 
 #include <Eigen/Core>
 #include <igl/readDMAT.h>
 #include <igl/writeDMAT.h>
 #include <cstdio>
+#ifdef USE_MATLAB_ENGINE
 #include <igl/matlab/MatlabWorkspace.h>
+#endif
 #include <igl/on_boundary.h>
 
 #include "igl/readOBJ.h"
@@ -63,8 +66,9 @@
 #include <extension_from_name.h>
 #include <readH5MAT.h>
 #include <writeH5MAT.h>
+#ifdef USE_MATLAB_ENGINE
 #include <MATLAB/matlab.h>
-
+#endif
 #include "utils/TimerWrapper.h"
 //#include <FAST/skinning.h>
 //#include <skinning_interface.h>
@@ -634,10 +638,10 @@ DeformSkinningBase::DeformSkinningBase()
 
 	sorted_alphaFactors.resize(0, 0);
 	sorted_betaFactors.resize(0, 0);
-
+#ifdef USE_MATLAB_ENGINE
 	matlabEngine = new (Engine*);
 	igl::matlab::mlinit(matlabEngine);
-
+#endif
 	currentWeightsFileName = "";
 	current_weights_frame_index = 0;
 
@@ -651,12 +655,14 @@ DeformSkinningBase::DeformSkinningBase()
 
 DeformSkinningBase::~DeformSkinningBase()
 {
+#ifdef USE_MATLAB_ENGINE
 	using namespace igl::matlab;
 	if (*matlabEngine != NULL)
 	{
 		mlclose(matlabEngine);
 		delete *matlabEngine;
 	}
+#endif
 };
 
 // initialization (runs every time a mesh is loaded or cleared)
@@ -794,7 +800,7 @@ void DeformSkinningBase::applyPointBasedSkinning(Eigen::Matrix<double, Eigen::Dy
 	}
 }
 
-#include <print_matlab.h>
+//#include <print_matlab.h>
 void DeformSkinningBase::set_M_lbs_matrix(int dim)
 {
 	// Set M matrix

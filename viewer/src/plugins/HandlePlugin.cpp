@@ -745,6 +745,7 @@ void TW_CALL HandlePlugin::call_dialog_triangle_with_handle(void *clientData)
 #include "matlab_folder_path.h"
 bool HandlePlugin::call_tetgen_with_handle()
 {
+#ifdef USE_MATLAB_ENGINE
 	using namespace igl::matlab;
 
 	Engine **matlabEngine;
@@ -765,9 +766,13 @@ bool HandlePlugin::call_tetgen_with_handle()
 	mleval(matlabEngine, "ExternalCallList_Tetgen;");
 
 	return true;
+#else
+	return false;
+#endif
 }
 bool HandlePlugin::call_triangle_with_handle()
 {
+#ifdef USE_MATLAB_ENGINE
 	using namespace igl::matlab;
 
 	Engine **matlabEngine;
@@ -788,10 +793,14 @@ bool HandlePlugin::call_triangle_with_handle()
 	mleval(matlabEngine, "ExternalCallList_Triangle;");
 
 	return true;
+#else
+	return false;
+#endif
 }
 
 void HandlePlugin::call_matlab_visualize()
 {
+#ifdef USE_MATLAB_ENGINE
 	using namespace igl::matlab;
 
 	Engine **matlabEngine;
@@ -803,7 +812,9 @@ void HandlePlugin::call_matlab_visualize()
 	//print_matlab("face_property", face_property_);
 
 	mleval(matlabEngine, str_visualize);
+#endif
 }
+
 void HandlePlugin::send_selected_handles_to_MATALB()
 {
 	int num = 0;
@@ -821,10 +832,14 @@ void HandlePlugin::send_selected_handles_to_MATALB()
 		B.block(r, 0, dr, 1) = all_handle_list[select_handle_list[i]].IndexInHandles();
 		r += dr;
 	}
+#ifdef USE_MATLAB_ENGINE
 	Eigen::MatrixXd allH = Handles.cast<double>();
 	print_matlab("allH", allH);
 	print_matlab("SP", P);
 	print_matlab("SB", B);
+#else
+#endif
+
 }
 
 

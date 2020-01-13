@@ -15,6 +15,8 @@
 #include <Animation.h>
 #include "utils/TimerWrapper.h"
 
+//#define USE_MATLAB_ENGINE
+#ifdef USE_MATLAB_ENGINE
 #include "engine.h"
 
 #ifdef USING_IGL_HEADER_ONLY_MODE
@@ -23,6 +25,8 @@
 #undef IGL_HEADER_ONLY
 #else
 #include "igl/matlab/matlabinterface.h"
+#endif
+
 #endif
 
 #include "virtual_function_default.h"
@@ -267,7 +271,9 @@ protected:
 	Eigen::MatrixXd Weights;
 	//bool showHandles;
 public:
+#ifdef USE_MATLAB_ENGINE
 	Engine **matlabEngine;
+#endif	
 	Eigen::MatrixXd GetWeights() const
 	{
 		return Weights;

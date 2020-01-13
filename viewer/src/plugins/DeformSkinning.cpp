@@ -67,6 +67,7 @@ void DeformSkinning::do_this_when_only_M_loaded()
 
 bool DeformSkinning::load_tet_group_from_MATLAB()
 {
+#ifdef USE_MATLAB_ENGINE
 	using namespace igl::matlab;
 
 	if (!workSpaceClearedBeforeUse)
@@ -91,6 +92,9 @@ bool DeformSkinning::load_tet_group_from_MATLAB()
 	DeformPhysUI::GetReference().set_rotation_cluster(tet_group.col(0));
 
 	return true;
+#else
+	return false;
+#endif
 }
 
 inline bool is_3d_vertices(const Eigen::MatrixXd& V)
@@ -102,6 +106,7 @@ inline bool is_3d_vertices(const Eigen::MatrixXd& V)
 #include "matlab_folder_path.h"
 bool DeformSkinning::send_data_to_MATALB()
 {
+#ifdef USE_MATLAB_ENGINE
 	using namespace igl::matlab;
 	std::string str_cd_folder = std::string("cd ") + std::string(MATLAB_FOLDER_PATH);
 	mleval(matlabEngine, str_cd_folder);
@@ -172,6 +177,9 @@ bool DeformSkinning::send_data_to_MATALB()
 	mlsetmatrix(matlabEngine, "BC", BC);
 
 	return true;
+#else
+	return false;
+#endif
 }
 
 #include <compute_weights.h>
@@ -219,7 +227,7 @@ bool DeformSkinning::compute_weights()
 			return false;
 		}
 		
-		set_weights(newW, "From Matlab");
+		set_weights(newW, "bilaplacian coordinates");
 
 		printf("Compute Weights Matrix:(%d,%d) using %f sec.\n", Weights.rows(), Weights.cols(), timeWrapper.Duration());
 
@@ -241,7 +249,7 @@ bool DeformSkinning::compute_weights()
 		HandlePlugin::GetReference().recover_M2d_from_M3d(M3d_hs, M2d_hs);
 		//print_matlab("M2d_hs",M2d_hs);
 		// only calculate and load M3d_hs
-		printf("Load Hybrid Skinning Weights Matrix from MATLAB:(%d,%d) using %f sec.\n", M3d_hs.rows(), M3d_hs.cols(), timeWrapper.Duration());
+		printf("Compute Hybrid Skinning Weights Matrix:(%d,%d) using %f sec.\n", M3d_hs.rows(), M3d_hs.cols(), timeWrapper.Duration());
 
 		do_this_when_only_M_loaded();
 	}
@@ -258,6 +266,8 @@ bool DeformSkinning::compute_weights()
 //#include <print_matlab.h>
 bool DeformSkinning::load_weights_from_MATLAB()
 {
+
+#ifdef USE_MATLAB_ENGINE
 	using namespace igl::matlab;
 
 	TimerWrapper timeWrapper;
@@ -321,6 +331,9 @@ bool DeformSkinning::load_weights_from_MATLAB()
 	//applySkinning();
 
 	return true;
+#else
+	return false;
+#endif
 }
 
 #include <extension_from_name.h>
@@ -381,9 +394,8 @@ bool DeformSkinning::load_weights_from_file2(const char* weights_file_name)
 		}
 
 		HandlePlugin::GetReference().recover_M2d_from_M3d(M3d_hs, M2d_hs);
-		//print_matlab("M2d_hs",M2d_hs);
 		// only calculate and load M3d_hs
-		printf("Load Hybrid Skinning Weights Matrix from MATLAB:(%d,%d).\n", M3d_hs.rows(), M3d_hs.cols());
+		printf("Load Hybrid Skinning Weights Matrix from file:(%d,%d).\n", M3d_hs.rows(), M3d_hs.cols());
 
 		do_this_when_only_M_loaded();
 	}
