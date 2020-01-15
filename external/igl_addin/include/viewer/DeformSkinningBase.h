@@ -15,7 +15,7 @@
 #include <Animation.h>
 #include "utils/TimerWrapper.h"
 
-//#define USE_MATLAB_ENGINE
+#define USE_MATLAB_ENGINE
 #ifdef USE_MATLAB_ENGINE
 #include "engine.h"
 

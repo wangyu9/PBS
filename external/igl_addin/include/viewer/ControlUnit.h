@@ -73,6 +73,7 @@ public:
 	void draw();
 
 	void initTest(const HandleStructure& hs);// should remove at some point
+	void initAsIndependent(const HandleStructure& hs);// should remove at some point
 	void initActive(const HandleStructure& hs);
 	void init(const HandleStructure& hs, const Eigen::VectorXi& cs);
 

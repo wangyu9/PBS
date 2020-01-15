@@ -23,6 +23,7 @@ protected:
 protected:
 	
 	void initFromHandle(const HandleStructure& hs);
+	void initAsIndependent(const HandleStructure& hs);
 	void initControlStructActive(const HandleStructure& hs);
 	void initControlStruct(const HandleStructure& hs, const Eigen::VectorXi& cs);
 	void addControlStruct(const HandleStructure& hs, const Eigen::VectorXi& cs);

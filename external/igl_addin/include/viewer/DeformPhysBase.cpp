@@ -98,7 +98,7 @@ bool DeformPhysBase::UpdateConstraint(const LinearConstraint23d& lc)
 
 	if (dim != Dim)
 	{
-		printf("Warning: Constraint dimension does not match, constrain not set!");
+		printf("Warning: Constraint dimension does not match (%d,%d), constrain not set!\n",dim, Dim);
 		return false;
 	}
 		

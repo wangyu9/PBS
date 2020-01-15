@@ -58,6 +58,11 @@ void DeformDirectBase::initFromHandle(const HandleStructure& hs)
 	controlStruct.initTest(hs);
 }
 
+void DeformDirectBase::initAsIndependent(const HandleStructure& hs)
+{
+	controlStruct.initAsIndependent(hs);
+}
+
 void DeformDirectBase::initControlStructActive(const HandleStructure& hs)
 {
 	controlStruct.initActive(hs);

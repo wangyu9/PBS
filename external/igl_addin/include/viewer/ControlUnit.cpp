@@ -409,6 +409,38 @@ void ControlStruct::initTest(const HandleStructure& hs)
 	print();
 }
 
+void ControlStruct::initAsIndependent(const HandleStructure& hs)
+{
+	controlUnits.clear();
+	for (int i = 0; i<hs.all_handle_list.size(); i++)
+	{
+		const handleData& hd = hs.all_handle_list[i];
+		if (hd.type() != HandleTypePoint)
+		{
+			ControlUnit cu(hd.CenterPos()(0, 0), hd.CenterPos()(0, 1), hd.CenterPos()(0, 2), i);
+			controlUnits.push_back(cu);
+		}
+	}
+
+	//for (int i = 1; i<controlUnits.size(); i++)
+	//{
+	//	controlUnits[i].parent = &controlUnits[i - 1];
+	//	controlUnits[i - 1].children.push_back(&controlUnits[i]); // just for now
+	//}
+
+	//for (int i = 0; i < controlUnits.size(); i++)
+	//{
+	//	if (controlUnits[i].parent != NULL)
+	//	{
+	//		controlUnits[i].rotateWidget.enable_translation = false;// only allow roots translation now
+	//	}
+	//}
+
+	set_selected_list(false);
+
+	print();
+}
+
 void ControlStruct::initActive(const HandleStructure& hs)
 {
 	Eigen::VectorXi cs(hs.all_handle_list.size());

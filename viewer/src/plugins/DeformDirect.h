@@ -17,10 +17,12 @@ public:
 	void InitExternalCallFromHandle();
 	void InitFromActiveHandleStruct();
 	bool InitFromControlStruct(const char* fname);
+	void InitAsIndependent();
 	bool AddFromControlStruct(const char* fname);
 	bool InitOrAddFromControlStruct(const char* fname, bool isInit);// true for init, false for add
 
 	// AntTweakBar
+	static void TW_CALL dialog_init_as_independent_struct(void *clientData);
 	static void TW_CALL dialog_init_from_handle_struct(void *clientData);
 	static void TW_CALL dialog_init_from_control_struct_file(void *clientData);
 	static void TW_CALL dialog_init_control_struct_from_active(void *clientData);

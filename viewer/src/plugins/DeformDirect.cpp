@@ -49,6 +49,26 @@ bool DeformDirectUI::InitFromControlStruct(const char* fname)
 	return InitOrAddFromControlStruct(fname, true);
 }
 
+void DeformDirectUI::InitAsIndependent()
+{
+	const HandleStructure& hs = HandlePlugin::GetReference().GetHandleStructRef();
+	Eigen::VectorXi cs;
+
+	const int hsize = hs.all_handle_list.size();
+	{
+		Eigen::VectorXi tmp = cs;
+		cs.resize(hsize, 1);
+		cs.setConstant(-1);
+		cs.block(0, 0, tmp.rows(), 1) = tmp;
+	}
+
+	{
+		DeformDirectBase::initControlStruct(hs, cs);
+	}
+
+	return;
+}
+
 bool DeformDirectUI::InitOrAddFromControlStruct(const char* fname, bool isInit)
 {
 	const HandleStructure& hs = HandlePlugin::GetReference().GetHandleStructRef();
@@ -84,6 +104,7 @@ bool DeformDirectUI::InitOrAddFromControlStruct(const char* fname, bool isInit)
 
 
 // AntTreakBar
+
 
 void TW_CALL DeformDirectUI::dialog_init_from_handle_struct(void *clientData)
 {
@@ -156,6 +177,11 @@ bool CommandLine(DeformDirectUI& plugin, std::vector<std::string> cl)
 			return false;
 		}
 		return plugin.InitFromControlStruct(cl[1].c_str());
+	}
+	else if (cl[0] == std::string("init_as_independent_struct"))
+	{
+		plugin.InitAsIndependent();
+		return true;
 	}
 	else if (cl[0] == std::string("load_key_frame_config"))
 	{
