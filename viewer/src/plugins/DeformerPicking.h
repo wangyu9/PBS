@@ -30,6 +30,12 @@
 //};
 
 
+class TestClass 
+{
+public:
+	static void StaticFunction();
+};
+
 #include <viewer/CommandLineBase.h>
 
 class DeformerPicking : public CommandLineBase
@@ -94,6 +100,7 @@ public:
 	bool import_handles_in_picking;
 	bool with_subspace_arap;
 };
+
 
 //static DeformerPickingConfig deformerPickingConfig;
 

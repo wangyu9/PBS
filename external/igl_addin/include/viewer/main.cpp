@@ -12,6 +12,7 @@
 #   include <GL/glut.h>
 #endif
 
+#include "../../../../viewer/src/plugins/DeformerPicking.h"
 #include "./plugins/DeformerPicking.h"//wangyu
 
 Preview3D * preview_3D;
@@ -129,6 +130,7 @@ int main(int argc, char *argv[])
   //   required because the GLUT key event functions do not report key modifiers states.
   TwGLUTModifiersFunc(glutGetModifiers);
 
+  //DeformerPicking* pDeformerPickingInstance = new DeformerPicking();
 
   // Load the given mesh
   //if(argc < 0 ||     argv[1] == NULL ||     !preview_3D->load_mesh_from_file(argv[1]))
@@ -138,7 +140,8 @@ int main(int argc, char *argv[])
   {
 	  // notice that argv[0] is the path_name of the viewer, not the argument!!
 	  //setDeformerPicking(argv[1]);
-	  //DeformerPicking::GetReference().start_with_command(std::string(argv[1]));
+	  //DeformerPicking::GetReference(); // .start_with_command(std::string(argv[1]));
+	  TestClass::StaticFunction();
   }
   else
   {

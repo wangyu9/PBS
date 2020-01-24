@@ -19,6 +19,8 @@
 #include "plugins/HandlePlugin.h"
 #include "plugins/PickingPlugin.h"
 
+void TestClass::StaticFunction() { return; }
+
 static DeformerPicking  DeformerPickingInstance;
 
 DeformerPicking&  DeformerPickingInstance_(){ return DeformerPickingInstance; }
