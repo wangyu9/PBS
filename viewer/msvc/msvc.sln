@@ -10,9 +10,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "removed_codes2", "simp_skinning\simp_skinning.vcxproj", "{EFCB9BBA-2D5B-40E8-BC2B-244CCD11A6AF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pbs", "pbs\pbs.vcxproj", "{FC7958B8-A002-4846-BC40-CA9E07E21CED}"
-	ProjectSection(ProjectDependencies) = postProject
-		{788898F5-D06E-4C2D-9286-12ADE6B395A9} = {788898F5-D06E-4C2D-9286-12ADE6B395A9}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "deformer", "deformer\deformer.vcxproj", "{102DD205-3AEB-4DC8-9F40-45F8F80ECEC6}"
 EndProject

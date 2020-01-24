@@ -140,8 +140,8 @@ int main(int argc, char *argv[])
   {
 	  // notice that argv[0] is the path_name of the viewer, not the argument!!
 	  //setDeformerPicking(argv[1]);
-	  //DeformerPicking::GetReference(); // .start_with_command(std::string(argv[1]));
-	  TestClass::StaticFunction();
+	  DeformerPicking::GetReference().start_with_command(std::string(argv[1]));
+	  //TestClass::StaticFunction();
   }
   else
   {
