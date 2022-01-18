@@ -407,6 +407,137 @@ bool DeformSkinning::load_weights_from_file2(const char* weights_file_name)
 	return true;
 }
 
+
+#ifdef __linux__
+#include <unistd.h>
+#define GetCurrentDir getcwd
+#else // ifdef WINDOWS
+#include <direct.h>
+#define GetCurrentDir _getcwd
+#endif
+
+std::string get_current_dir() {
+	char buff[FILENAME_MAX]; //create string buffer to hold path
+	GetCurrentDir(buff, FILENAME_MAX); //GetCurrentDir(buff, FILENAME_MAX);
+	std::string current_working_dir(buff);
+	return current_working_dir;
+
+	// >= c++ 17
+	
+	// using namespace std::experimental::filesystem;
+	// return current_path();
+}
+
+#include <igl/lbs_matrix.h>
+#include <iostream>
+bool DeformSkinning::load_skinning_weights_from_file(const char* weights_file_name)
+{
+	std::string extension = extension_from_name(weights_file_name);
+	Eigen::MatrixXd newW;
+
+	switch (skinningType)
+	{
+	case LBS:
+	case DQLBS:
+	case PBS:
+	case None:
+	{
+
+		if (extension == "dmat")
+		{
+			igl::readDMAT(weights_file_name, newW);
+		}
+		else if (extension == "h5")
+		{
+#ifdef SUPPORT_HDF5_MAT
+			readH5MAT(weights_file_name, newW);
+#else
+			printf("Unknown weights file type %s", weights_file_name);
+			return false;
+#endif
+		}
+		else
+		{
+			printf("Unknown weights file type %s", weights_file_name);
+			return false;
+		}
+
+		if (newW.cols() == 0)
+		{
+			printf("Load Weights fails!\n");
+			return false;
+		}
+
+		set_weights(newW, "From file");
+
+		printf("Load Weights Matrix from file. :(%d,%d).\n", Weights.rows(), Weights.cols());
+	}
+	break;
+	case HS:
+	{
+		const Eigen::MatrixXd& V_rest = m_preview3d->GetMainMesh().rest_vertices;
+
+
+		if (extension == "dmat")
+		{
+			igl::readDMAT(weights_file_name, newW);
+		}
+		else if (extension == "mtx")
+		{
+
+#ifdef USE_MATLAB_ENGINE
+
+			using namespace igl::matlab;
+
+			std::string file_full_path =  get_current_dir() + "/" + weights_file_name;
+			
+			printf("Trying to load mtx file via matlab: %s.\n", file_full_path.c_str());
+
+			std::string str_cd_folder = std::string("cd ") + std::string(MATLAB_FOLDER_PATH);
+			mleval(matlabEngine, str_cd_folder);
+
+			mleval(matlabEngine, "ExternalCallList_Setup;");
+
+			mleval(matlabEngine, "temp_mtx_mat = mread(\'" + file_full_path + "\');");
+
+			mlgetmatrix(matlabEngine, "temp_mtx_mat", newW);
+#else
+			printf("Error: cannot read mtx file without MATLAB!\n");
+			return false;
+#endif
+
+
+			;// mread();
+		}
+		else
+		{
+			printf("Unknown weights file type %s", weights_file_name);
+			return false;
+		}
+
+		igl::lbs_matrix(V_rest, newW, M3d_hs);
+
+		if (M3d_hs.cols() == 0)
+		{
+			printf("Load Hybrid Skinning Weights Fails!\n");
+			return false;
+		}
+
+		HandlePlugin::GetReference().recover_M2d_from_M3d(M3d_hs, M2d_hs);
+		// only calculate and load M3d_hs
+		printf("Load Hybrid Skinning Weights Matrix from file:(%d,%d).\n", M3d_hs.rows(), M3d_hs.cols());
+
+		do_this_when_only_M_loaded();
+	}
+	break;
+	}
+
+	update_skinning = true;
+
+	return true;
+}
+
+
 void DeformSkinning::init(Preview3D *preview)
 {
 	bool init_antweakbar = (bar == NULL);
@@ -492,6 +623,15 @@ bool CommandLine(DeformSkinning& plugin, std::vector<std::string> cl)
 			return false;
 		}
 		return plugin.load_weights_from_file2(cl[1].c_str());
+	}
+	else if (cl[0] == std::string("load_skinning_weights_from_file"))
+	{
+		if (cl.size() < 2)
+		{
+			printf("Error: No file name for load_skinning_weights_from_file.\n");
+			return false;
+		}
+		return plugin.load_skinning_weights_from_file(cl[1].c_str());
 	}
 	else if (cl[0] == std::string("set_skinning_type"))
 	{

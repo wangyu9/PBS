@@ -36,6 +36,7 @@ public:
 	bool send_data_to_MATALB();
 	bool load_tet_group_from_MATLAB();
 	bool load_weights_from_file2(const char* weights_file_name);
+	bool load_skinning_weights_from_file(const char* weights_file_name);
 
 	static void TW_CALL dialog_compute_weights(void *clientData);
 	static void TW_CALL send_dialog_data_to_MATLAB(void *clientData);

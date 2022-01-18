@@ -207,7 +207,7 @@ select_handle_list(handleStructure.select_handle_list)
 	with_symmetric = false;
 	ske_dim = 3;
 	ske_radius = 20.;
-	ske_ring = 1;
+	ske_ring = 2;
 	ske_cylinder_or_ellipsoid = true;
 	num_per_seg_try_skeleton = 3;
 	num_seg_try_skeleton = 10;

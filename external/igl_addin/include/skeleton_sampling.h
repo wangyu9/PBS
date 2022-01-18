@@ -30,91 +30,207 @@ inline void volumetric_skeleton_sampling(
 
 	Eigen::MatrixXd temp_ske;
 
-	if (dim==3)
+	if (false) 
 	{
-		assert(start.rows()==3&&end.rows()==3);
-		Eigen::Vector3d n = end - start;
-		Eigen::Vector3d v1; 
-		Eigen::Vector3d v2;
-		orthogonal3d(n,v1,v2);
-		temp_ske.resize(sample_per_seg*(num_seg+1)*ring,3);
-		for(int k=0; k<ring; k++)
-		{ 
-			for (int i=0; i<=num_seg; i++)
+		// old version
+
+		if (dim == 3)
+		{
+			assert(start.rows() == 3 && end.rows() == 3);
+			Eigen::Vector3d n = end - start;
+			Eigen::Vector3d v1;
+			Eigen::Vector3d v2;
+			orthogonal3d(n, v1, v2);
+			temp_ske.resize(sample_per_seg*(num_seg + 1)*ring, 3);
+			for (int k = 0; k<ring; k++)
 			{
-				double r = (k + 1) * radius / ring;
-				if (!cylinder_or_ellipsoid)
-					r *= (sin(i*M_PI/num_seg)*0.99+0.01);// to avoid striking to a single point
-				Eigen::Vector3d c = start + n*(1.0*i)/num_seg;
-				//ske(i*3+0) = c + radius*(HALF_SQRT3*v1-0.5*v2);
-				//ske(i*3+1) = c + radius*(v2);
-				//ske(i*3+2) = c + radius*(-HALF_SQRT3*v1-0.5*v2);
-				for (int j=0; j<sample_per_seg; j++)
+				for (int i = 0; i <= num_seg; i++)
 				{
-					double theta = 2*M_PI*j/sample_per_seg;
-					temp_ske.row( k*sample_per_seg*(num_seg+1)+(i*sample_per_seg+j) ) = ( c + r*(v1*cos(theta)+v2*sin(theta)) ).transpose();
+					double r = (k + 1) * radius / ring;
+					if (!cylinder_or_ellipsoid)
+						r *= (sin(i*M_PI / num_seg)*0.99 + 0.01);// to avoid striking to a single point
+					Eigen::Vector3d c = start + n*(1.0*i) / num_seg;
+					//ske(i*3+0) = c + radius*(HALF_SQRT3*v1-0.5*v2);
+					//ske(i*3+1) = c + radius*(v2);
+					//ske(i*3+2) = c + radius*(-HALF_SQRT3*v1-0.5*v2);
+					for (int j = 0; j<sample_per_seg; j++)
+					{
+						double theta = 2 * M_PI*j / sample_per_seg;
+						temp_ske.row(k*sample_per_seg*(num_seg + 1) + (i*sample_per_seg + j)) = (c + r*(v1*cos(theta) + v2*sin(theta))).transpose();
+					}
+
 				}
-			
 			}
 		}
-	}
-	else
-	{
-		assert(dim==2);
-		assert(start.rows()==3&&end.rows()==3);
-		Eigen::Vector3d n = end- start;
-		n(2) = 0;
-		Eigen::Vector2d n2d;
-		n2d(0) = n(0);
-		n2d(1) = n(1);
-		Eigen::Vector2d v2d; 
-		orthogonal2d(n2d,v2d);
-		Eigen::Vector3d v;
-		v(0) = v2d(0);
-		v(1) = v2d(1);
-		v(2) = 0.;
-		temp_ske.resize(2*(num_seg+1)*ring,3);
-		for(int k=0; k<ring; k++)
-		{
-			for (int i=0; i<=num_seg; i++)
-			{
-				double r = (k + 1) * radius / ring;
-				if (!cylinder_or_ellipsoid)
-					r *= (sin(i*M_PI / num_seg)*0.99 + 0.01);// to avoid striking to a single point
-				Eigen::Vector3d c = start + n*(1.0*i)/num_seg;
-				c(2) = 0;
-				for (int j=0; j<2; j++)
-				{
-					double sign = (j==0)?1.0:-1.0;
-					temp_ske.row( k*2*(num_seg+1)+(i*2+j) ) = ( c + v*r*(sign) ).transpose();
-				}
-
-			}
-		}
-	}
-
-	if (append_twoends)
-	{
-		if (abs(radius)>10e-6)
-		{
-			ske.resize(temp_ske.rows() + 2, 3);
-			ske.row(0) = start.transpose();
-			ske.row(1) = end.transpose();
-			ske.block(2, 0, temp_ske.rows(), 3) = temp_ske;
-		} 
 		else
 		{
-			ske = temp_ske;//do not need to warning this. printf("Warning: ignoring append_twoends due to small radius(%d).", );
-			int nn = ske.rows();
-			// swap the two because twoends are always in the beginning.
-			ske.row(1) = temp_ske.row(nn-1);
-			ske.row(nn - 1) = temp_ske.row(1);
+			assert(dim == 2);
+			assert(start.rows() == 3 && end.rows() == 3);
+			Eigen::Vector3d n = end - start;
+			n(2) = 0;
+			Eigen::Vector2d n2d;
+			n2d(0) = n(0);
+			n2d(1) = n(1);
+			Eigen::Vector2d v2d;
+			orthogonal2d(n2d, v2d);
+			Eigen::Vector3d v;
+			v(0) = v2d(0);
+			v(1) = v2d(1);
+			v(2) = 0.;
+			temp_ske.resize(2 * (num_seg + 1)*ring, 3);
+			for (int k = 0; k<ring; k++)
+			{
+				for (int i = 0; i <= num_seg; i++)
+				{
+					double r = (k + 1) * radius / ring;
+					if (!cylinder_or_ellipsoid)
+						r *= (sin(i*M_PI / num_seg)*0.99 + 0.01);// to avoid striking to a single point
+					Eigen::Vector3d c = start + n*(1.0*i) / num_seg;
+					c(2) = 0;
+					for (int j = 0; j<2; j++)
+					{
+						double sign = (j == 0) ? 1.0 : -1.0;
+						temp_ske.row(k * 2 * (num_seg + 1) + (i * 2 + j)) = (c + v*r*(sign)).transpose();
+					}
+
+				}
+			}
 		}
-	} 
+
+
+		if (append_twoends)
+		{
+			if (abs(radius) > 10e-6)
+			{
+				ske.resize(temp_ske.rows() + 2, 3);
+				ske.row(0) = start.transpose();
+				ske.row(1) = end.transpose();
+				ske.block(2, 0, temp_ske.rows(), 3) = temp_ske;
+			}
+			else
+			{
+				ske = temp_ske;//do not need to warning this. printf("Warning: ignoring append_twoends due to small radius(%d).", );
+				int nn = ske.rows();
+				// swap the two because twoends are always in the beginning.
+				ske.row(1) = temp_ske.row(nn - 1);
+				ske.row(nn - 1) = temp_ske.row(1);
+			}
+		}
+		else
+		{
+			ske = temp_ske;
+		}
+
+	}
 	else
 	{
-		ske = temp_ske;
+		// new version: 
+
+		Eigen::MatrixXd centers;
+		centers.resize(num_seg - 1, 3);
+		Eigen::Vector3d n = end - start;
+
+		for (int i = 0; i < num_seg - 1; i++)
+		{
+			Eigen::Vector3d c = start + n*(1.0*(i + 1)) / num_seg;
+			if (dim == 2) c(2) = 0;
+			centers.row(i) = c.transpose();
+		}
+
+		if (dim == 3)
+		{
+			
+			assert(start.rows() == 3 && end.rows() == 3);
+			Eigen::Vector3d n = end - start;
+			Eigen::Vector3d v1;
+			Eigen::Vector3d v2;
+			orthogonal3d(n, v1, v2);
+			temp_ske.resize((num_seg - 1)*(ring-1)*sample_per_seg, 3);
+
+
+			for (int k = 0; k < ring - 1; k++)
+			{
+
+				for (int i = 0; i < num_seg - 1; i++)
+				{
+					double r = ring == 1 ? 0 : (k + 1) * radius / (ring - 1);
+
+					if (!cylinder_or_ellipsoid)
+						r *= (sin((i+1)*M_PI / num_seg)*0.99 + 0.01);
+
+					// Eigen::Vector3d c = start + n*(1.0*(i+1)) / num_seg;
+					Eigen::Vector3d c = (start + end) / 2.0 + cos((i + 1)*M_PI / num_seg) * (start - end) / 2.0;
+
+					for (int j = 0; j < sample_per_seg; j++)
+					{
+						double theta = 2 * M_PI*j / sample_per_seg;
+						temp_ske.row(k*sample_per_seg*(num_seg - 1) + (i*sample_per_seg + j)) = (c + r*(v1*cos(theta) + v2*sin(theta))).transpose();
+					}
+
+				}
+				
+			}
+
+		}
+		else
+		{
+			assert(dim == 2);
+			assert(start.rows() == 3 && end.rows() == 3);
+			Eigen::Vector3d n = end - start;
+			n(2) = 0;
+			Eigen::Vector2d n2d;
+			n2d(0) = n(0);
+			n2d(1) = n(1);
+			Eigen::Vector2d v2d;
+			orthogonal2d(n2d, v2d);
+			Eigen::Vector3d v;
+			v(0) = v2d(0);
+			v(1) = v2d(1);
+			v(2) = 0.;
+			temp_ske.resize((num_seg - 1)*(ring-1)*2, 3);
+			for (int k = 0; k < ring - 1; k++)
+			{
+				
+				for (int i = 0; i < num_seg - 1; i++)
+				{
+					double r = ring == 1 ? 0 : (k + 1) * radius / (ring - 1);
+					Eigen::Vector3d c = start + n*(1.0*(i + 1)) / num_seg;
+
+					if (!cylinder_or_ellipsoid) 
+					{
+						r *= (sin((i + 1)*M_PI / num_seg)*0.999 + 0.001);
+						c = (start + end) / 2.0 - cos((i + 1)*M_PI / num_seg) *  (end - start) / 2.0;
+					}
+					// // Eigen::Vector3d c = start + n*(1.0*(i+1)) / num_seg;
+					c(2) = 0;
+					for (int j = 0; j < 2; j++)
+					{
+						double sign = (j == 0) ? 1.0 : -1.0;
+						temp_ske.row(k * 2 * (num_seg - 1) + (i * 2 + j)) = (c + v*r*(sign)).transpose();
+					}
+
+				}
+			}
+		}
+
+
+		Eigen::MatrixXd ske2;
+		ske2.resize(centers.rows() + temp_ske.rows(), 3);
+		ske2 << centers, temp_ske;
+
+		if (append_twoends)
+		{
+			ske.resize(ske2.rows() + 2, 3);
+			ske.row(0) = start.transpose();
+			ske.row(1) = end.transpose();
+			ske.block(2, 0, ske2.rows(), 3) = ske2;
+		}
+		else
+		{
+			ske = ske2;
+		}
 	}
+
 }
 
 
